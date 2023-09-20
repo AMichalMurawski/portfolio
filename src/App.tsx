@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
 
-function App() {
+const Root = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route index element={<div>Portfolio</div>} />
+      <Route path={"cv"} element={<div>Curriculum Vitae</div>} />
+    </Routes>
   );
-}
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/*",
+    element: <Root />,
+    errorElement: <div>Error Page</div>,
+  },
+]);
+
+const App: React.FC = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
