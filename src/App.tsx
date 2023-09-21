@@ -5,6 +5,7 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
+import { ModeProvider } from "./providers/ModeProvider";
 
 const PortfolioPage = lazy(() => import('./pages/Portfolio'))
 const CVPage = lazy(() => import('./pages/CurriculumVitae'))
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return (<ModeProvider>
+    <RouterProvider router={router} />
+  </ModeProvider>);
 };
 
 export default App;
