@@ -5,7 +5,9 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
-import { ModeProvider } from "./providers/ModeProvider";
+import { ModeProvider } from "./providers/ModeProvider/ModeProvider";
+import { StyleProvider } from "./providers/StyleProvider/StyleProvider";
+import { MainProvider } from "./providers/MainProvider";
 
 const PortfolioPage = lazy(() => import('./pages/Portfolio'))
 const CVPage = lazy(() => import('./pages/CurriculumVitae'))
@@ -28,9 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC = () => {
-  return (<ModeProvider>
+  return (<MainProvider>
     <RouterProvider router={router} />
-  </ModeProvider>);
+  </MainProvider>);
 };
 
 export default App;
