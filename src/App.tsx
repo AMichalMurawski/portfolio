@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import {
   createBrowserRouter,
   Route,
@@ -6,11 +6,14 @@ import {
   Routes,
 } from "react-router-dom";
 
+const PortfolioPage = lazy(() => import('./pages/Portfolio'))
+const CVPage = lazy(() => import('./pages/CurriculumVitae'))
+
 const Root = () => {
   return (
     <Routes>
-      <Route index element={<div>Portfolio</div>} />
-      <Route path={"cv"} element={<div>Curriculum Vitae</div>} />
+      <Route index element={<PortfolioPage />} />
+      <Route path={"curriculum-vitae"} element={<CVPage />} />
     </Routes>
   );
 };
