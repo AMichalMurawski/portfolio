@@ -1,3 +1,3 @@
-export * from './MainProvider'
+export * from './MainProvider';
 
-export * from './MediaProvider/useMediaQuery'
+export * from './ThemeProvider/useContext';
