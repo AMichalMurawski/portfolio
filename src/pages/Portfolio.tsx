@@ -8,10 +8,12 @@ import {
   Skills,
 } from '../components/sections';
 import { FooTheme } from '../_tests_/FooTheme';
+import { FooConsole } from '../_tests_/FooConsole';
 
 const Portfolio: React.FC = () => {
   return (
     <div>
+      <FooConsole />
       <Header />
       <Home />
       <About />
