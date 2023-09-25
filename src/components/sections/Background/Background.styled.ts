@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BgWrapper = styled.div`
-    ${ props => {
-    const { bg, wall } = props.theme
+  ${props => {
+    const { wall } = props.theme;
     return `
         position: absolute;
         left: 0;
@@ -24,6 +24,6 @@ export const BgWrapper = styled.div`
         transform: rotate(180deg);
         transition: background ease-out 300ms;
         z-index: -999
-    `
-    }}
-`
+    `;
+  }}
+`;
