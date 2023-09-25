@@ -13,19 +13,27 @@ const basicStyle = {
 
 const lightStyle = {
   bg: {
-    main: 'purple',
+    main: '#eee',
   },
-  color: {
-    main: 'darkgreen',
+  wall: {
+    bg: '#666',
+    brick: '#eee'
+  },
+  txt: {
+    main: 'black',
   },
 };
 
 const darkStyle = {
   bg: {
-    main: 'black',
+    main: '#444',
   },
-  color: {
-    main: 'lightgreen',
+  wall: {
+    bg: '#111',
+    brick: '#444'
+  },
+  txt: {
+    main: 'white',
   },
 };
 

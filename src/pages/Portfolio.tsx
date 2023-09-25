@@ -9,10 +9,14 @@ import {
 } from '../components/sections';
 import { FooTheme } from '../_tests_/FooTheme';
 import { FooConsole } from '../_tests_/FooConsole';
+import { PageWrapper } from './Portfolio.styled';
+import { Background } from '../components/sections/Background/Background';
+import { ButtonMode } from '../_tests_/ButtonMode';
 
 const Portfolio: React.FC = () => {
   return (
-    <div>
+    <PageWrapper>
+      <Background />
       <FooConsole />
       <Header />
       <Home />
@@ -20,8 +24,8 @@ const Portfolio: React.FC = () => {
       <Skills />
       <Projects />
       <Contact />
-      <FooTheme />
-    </div>
+      <ButtonMode />
+    </PageWrapper>
   );
 };
 
