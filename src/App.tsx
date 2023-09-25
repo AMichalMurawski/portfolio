@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy } from 'react';
+import {
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from 'react-router-dom';
+import { MainProvider } from './providers/MainProvider';
 
-function App() {
+const PortfolioPage = lazy(() => import('./pages/Portfolio'));
+const CVPage = lazy(() => import('./pages/CurriculumVitae'));
+
+const Root = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route index element={<PortfolioPage />} />
+      <Route path={'curriculum-vitae'} element={<CVPage />} />
+    </Routes>
   );
-}
+};
+
+const router = createBrowserRouter([
+  {
+    path: '/*',
+    element: <Root />,
+    errorElement: <div>Error Page</div>,
+  },
+]);
+
+const App: React.FC = () => {
+  return (
+    <MainProvider>
+      <RouterProvider router={router} />
+    </MainProvider>
+  );
+};
 
 export default App;
