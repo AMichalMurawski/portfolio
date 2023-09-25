@@ -1,5 +1,6 @@
 import React from "react"
+import { HeaderWrapper } from "./Header.styled"
 
 export const Header: React.FC = () => {
-    return <div>Header Section</div>
+    return <HeaderWrapper>Header Section</HeaderWrapper>
 }
