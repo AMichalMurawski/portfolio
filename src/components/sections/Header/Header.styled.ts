@@ -19,16 +19,3 @@ export const ButtonsList = styled.ul`
   gap: 25px;
 `;
 
-const bsStyle = '1px 1px 1px black, 4px 4px 4px red';
-
-export const ButtonBox = styled(LiElement)`
-  padding: 10px;
-  border-radius: 10px;
-  background-color: red;
-  box-shadow: ${bsStyle};
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: inset 0 0 2px black, ${bsStyle};
-  }
-`;

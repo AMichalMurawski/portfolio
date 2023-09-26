@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  ButtonBox,
-  ButtonsList,
-  HeaderBox,
-  HeaderWrapper,
-} from './Header.styled';
+import { ButtonsList, HeaderBox, HeaderWrapper } from './Header.styled';
 import { ButtonLink } from '../../elements/ButtonLink/ButtonLink';
 import { links } from '../../../context';
 
@@ -17,21 +12,25 @@ export const Header: React.FC = () => {
             width: '80px',
             height: '80px',
             borderRadius: '50%',
+            color: 'white',
             backgroundColor: 'red',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             padding: 0,
             lineHeight: 1,
+            boxShadow: 'inset 0 0 10px 4px gray',
           }}
         >
           Logo
         </div>
         <ButtonsList>
           {links.map(link => (
-            <ButtonBox key={link.path}>
-              <ButtonLink caption={link.name} linkTo={link.path} />
-            </ButtonBox>
+            <ButtonLink
+              key={link.path}
+              caption={link.name}
+              linkTo={link.path}
+            />
           ))}
         </ButtonsList>
       </HeaderWrapper>
