@@ -1,19 +1,25 @@
 import { ModeType } from './types';
 
 const basicStyle = {
-  title: {
-    font: 'Roboto',
-    size: 36,
+  fontSize: {
+    main: '18px',
+    title: '36px',
+    subtitle: '24px',
   },
-  sectionTitle: {
-    font: 'Roboto',
-    size: 24,
+  fontFamily: {
+    main: 'Roboto',
+  },
+  lineHeight: {
+    main: 1.2,
+    small: 1,
+    medium: 1.5,
+    big: 1.8,
   },
 };
 
 const lightStyle = {
   color: {
-    introduce: 'black',
+    main: 'black',
   },
   bg: {
     main: '#eee',

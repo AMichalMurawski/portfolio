@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { LinkElement } from '../../../utils/styled';
+import { LinkElement } from '../../../../utils/styled';
 
 const bsStyle = '1px 1px 1px black, 4px 4px 4px red';
 

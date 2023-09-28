@@ -1,15 +1,14 @@
 import React from 'react';
-import { HoIAm, HomeWrapper, Introduce, Sentence } from './Home.styled';
+import { HomeWrapper, Introduce, Sentence } from './Home.styled';
+import { ButtonCV } from '../../elements/buttons';
+import { Subtitle, Title } from '../../elements/texts';
 
 export const Home: React.FC = () => {
   return (
     <HomeWrapper>
       <Introduce>
-        <HoIAm>
-          <span>Web Developer</span>
-          <br />
-          Michał Murawski
-        </HoIAm>
+        <Subtitle>Web Developer</Subtitle>
+        <Title>Michał Murawski</Title>
         <Sentence>
           Anything that can be explained logically,
           <br />
@@ -38,16 +37,9 @@ export const Home: React.FC = () => {
             position: 'absolute',
             left: '8%',
             top: '80%',
-            width: '50px',
-            height: '50px',
-            borderRadius: '50%',
-            backgroundColor: 'white',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
           }}
         >
-          CV
+          <ButtonCV linkTo="#" />
         </div>
       </div>
     </HomeWrapper>

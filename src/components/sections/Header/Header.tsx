@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonsList, HeaderBox, HeaderWrapper } from './Header.styled';
-import { ButtonLink } from '../../elements/ButtonLink/ButtonLink';
+import { ButtonLink } from '../../elements/buttons';
 import { links } from '../../../context';
 
 export const Header: React.FC = () => {
