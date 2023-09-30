@@ -19,6 +19,6 @@ export const PictureWrapper = styled.div`
 
 export const CVWrapper = styled.div`
   position: absolute;
-  left: 8%;
-  top: 80%;
+  left: 2%;
+  top: 75%;
 `;

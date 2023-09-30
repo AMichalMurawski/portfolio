@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { LinkElement } from '../../../../utils/styled';
 
 export const Button = styled(LinkElement)`
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  font-weight: 700;
   border-radius: 50%;
   background-color: white;
   display: flex;
