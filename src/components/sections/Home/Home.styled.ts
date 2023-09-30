@@ -16,8 +16,3 @@ export const Introduce = styled.div`
   height: min-content;
   margin: 15% 0 0;
 `;
-
-export const Sentence = styled.p`
-  padding-top: 10px;
-  line-height: ${props => props.theme.lineHeight.medium};
-`;
