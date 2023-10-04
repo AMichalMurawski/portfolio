@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BgWrapper = styled.div`
-    ${ props => {
-    const { bg, wall } = props.theme
+  ${props => {
+    const { wall } = props.theme;
     return `
         position: absolute;
         left: 0;
         bottom: 0;
         height: 0;
         width: 100%;
-        min-width: 100vw;
-        height: 100%;
+        min-width: 100%;
+        height: 200%;
         min-height: 100vh;
         background-color: white;
         background:
@@ -23,7 +23,7 @@ export const BgWrapper = styled.div`
         background-size: 48px 30px;
         transform: rotate(180deg);
         transition: background ease-out 300ms;
-        z-index: -999
-    `
-    }}
-`
+        z-index: -900;
+    `;
+  }}
+`;

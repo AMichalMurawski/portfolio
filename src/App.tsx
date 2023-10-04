@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
 import {
   createBrowserRouter,
   Route,
@@ -29,9 +29,11 @@ const router = createBrowserRouter([
 
 const App: React.FC = () => {
   return (
-    <MainProvider>
-      <RouterProvider router={router} />
-    </MainProvider>
+    <Suspense fallback={<div>Loading Page</div>}>
+      <MainProvider>
+        <RouterProvider router={router} />
+      </MainProvider>
+    </Suspense>
   );
 };
 
