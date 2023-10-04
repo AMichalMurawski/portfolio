@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { H2Element } from '../../elements/texts/Subtitle/Subtitle.styled';
-import { H1Element } from '../../elements/texts/Title/Title.styled';
+import { H1Element, H2Element } from '../../../utils/styles';
 
 export const IntroductionWrapper = styled.div`
   padding: 30px;

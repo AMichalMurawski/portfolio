@@ -1,7 +1,7 @@
 import React from 'react';
-import { H2Element } from './Subtitle.styled';
-import { TextProps } from '../types';
+import { Sub } from './Subtitle.styled';
+import { TextsProps } from '../types';
 
-export const Subtitle: React.FC<TextProps> = ({ children }) => {
-  return <H2Element>{children}</H2Element>;
+export const Subtitle: React.FC<TextsProps> = ({ children }) => {
+  return <Sub>{children}</Sub>;
 };

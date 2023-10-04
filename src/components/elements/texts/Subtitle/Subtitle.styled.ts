@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import { headingStyles } from '../../../../utils/styled';
+import { H2Element } from '../../../../utils/styles';
 
-export const H2Element = styled.h2`
-  font-size: ${props => props.theme.fontSize.subtitle};
-  ${headingStyles}
-`;
+export const Sub = styled(H2Element)``;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Subtitle } from '../../elements/texts';
-import { AboutWrapper } from './About.styled';
-import { Paragraph } from '../../elements/texts/Paragraph/Paragraph';
+import { AboutWrapper, Paragraph } from './About.styled';
 import { aboutMe } from '../../../context';
 
 export const About: React.FC = () => {

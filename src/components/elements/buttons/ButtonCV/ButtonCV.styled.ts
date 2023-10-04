@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { LinkElement } from '../../../../utils/styled';
+import { LinkElement } from '../../../../utils/styles/global';
 
 export const Button = styled(LinkElement)`
   width: 100px;

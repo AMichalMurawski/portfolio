@@ -1,3 +1,3 @@
-export interface TextProps {
+export interface TextsProps {
   children: any;
 }
