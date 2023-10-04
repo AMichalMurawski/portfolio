@@ -2,7 +2,7 @@ import React from 'react';
 import { ListElement, ListWrapper, SkillsWrapper } from './Skills.styled';
 import { Subtitle } from '../../elements/texts';
 import { skills } from '../../../context/skills';
-import { Skill } from '../../groups/Skill/Skill';
+import { Skill } from '../../elements/ui';
 
 export const Skills: React.FC = () => {
   return (

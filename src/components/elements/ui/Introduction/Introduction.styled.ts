@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H1Element, H2Element } from '../../../utils/styles';
+import { H1Element, H2Element } from '../../../../utils/styles';
 
 export const IntroductionWrapper = styled.div`
   padding: 30px;

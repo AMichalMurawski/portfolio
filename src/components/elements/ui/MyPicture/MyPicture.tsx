@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonCV } from '../../elements/buttons';
-import { groupProps } from '../types';
+import { ButtonCV } from '../../buttons';
+import { groupProps } from '../../types';
 import { BoxWrapper, CVWrapper, PictureWrapper } from './MyPicture.styled';
 
 export const MyPicture: React.FC<groupProps> = ({ wrapperStyles }) => {

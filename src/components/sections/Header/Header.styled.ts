@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { PageWrapper } from '../../../pages/Portfolio.styled';
-import { LiElement } from '../../../utils/styled';
 
 export const HeaderBox = styled.div`
   width: 100%;
@@ -18,4 +17,3 @@ export const ButtonsList = styled.ul`
   display: flex;
   gap: 25px;
 `;
-
