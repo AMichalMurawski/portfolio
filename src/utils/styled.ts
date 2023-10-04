@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 export const LiElement = styled.li`
   list-style-type: none;
 `;
 
-export const LinkElement = styled(Link)`
+export const LinkElement = styled(HashLink)`
   text-decoration: none;
 `;
 

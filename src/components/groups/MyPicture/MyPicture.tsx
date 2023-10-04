@@ -8,7 +8,7 @@ export const MyPicture: React.FC<groupProps> = ({ wrapperStyles }) => {
     <BoxWrapper style={wrapperStyles}>
       <PictureWrapper>My Pic</PictureWrapper>
       <CVWrapper>
-        <ButtonCV linkTo="#" />
+        <ButtonCV linkTo="/curriculum-vitae" />
       </CVWrapper>
     </BoxWrapper>
   );

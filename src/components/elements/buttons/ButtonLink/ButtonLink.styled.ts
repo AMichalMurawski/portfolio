@@ -3,7 +3,7 @@ import { LinkElement } from '../../../../utils/styled';
 
 const bsStyle = '1px 1px 1px black, 4px 4px 4px red';
 
-export const Button = styled(LinkElement).attrs({ type: 'button' })`
+export const Button = styled(LinkElement)`
   padding: 10px;
   border-radius: 10px;
   background-color: ${props => props.theme.btnLink.bg};

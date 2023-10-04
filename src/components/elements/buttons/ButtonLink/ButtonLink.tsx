@@ -7,5 +7,9 @@ interface ButtonProps {
 }
 
 export const ButtonLink: React.FC<ButtonProps> = ({ caption, linkTo }) => {
-  return <Button to={linkTo}>{caption}</Button>;
+  return (
+    <Button smooth to={linkTo}>
+      {caption}
+    </Button>
+  );
 };

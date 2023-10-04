@@ -4,7 +4,7 @@ import { Subtitle } from '../../elements/texts';
 
 export const Skills: React.FC = () => {
   return (
-    <SkillsWrapper>
+    <SkillsWrapper id="skills">
       <Subtitle>My skills</Subtitle>
     </SkillsWrapper>
   );

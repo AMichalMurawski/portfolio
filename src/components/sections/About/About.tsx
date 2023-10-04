@@ -6,10 +6,10 @@ import { aboutMe } from '../../../context';
 
 export const About: React.FC = () => {
   return (
-    <AboutWrapper>
+    <AboutWrapper id="about">
       <Subtitle>About Me</Subtitle>
-      {aboutMe.map(about => (
-        <Paragraph>{about}</Paragraph>
+      {aboutMe.map((about, i) => (
+        <Paragraph key={i}>{about}</Paragraph>
       ))}
     </AboutWrapper>
   );
