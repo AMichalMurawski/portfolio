@@ -6,7 +6,7 @@ import {
 } from './Projects.styled';
 import { Subtitle } from '../../elements/texts';
 import { projects } from '../../../context';
-import { Project } from '../../elements/ui/Project/Project';
+import { Project } from '../../elements/ui';
 
 export const Projects: React.FC = () => {
   return (

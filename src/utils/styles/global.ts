@@ -24,6 +24,12 @@ export const PElement = styled.p`
   `}
 `;
 
+export const AElement = styled.a`
+  font-style: normal;
+  text-decoration: none;
+  color: ${props => props.theme.color.main};
+`;
+
 export const LiElement = styled.li`
   list-style-type: none;
 `;
