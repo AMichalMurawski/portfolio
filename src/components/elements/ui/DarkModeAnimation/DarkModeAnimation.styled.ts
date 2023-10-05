@@ -12,8 +12,7 @@ export const ModeWrapper = styled.div`
 `;
 
 export const Background = styled.div`
-  width: 130%;
-  left: -30%;
+  width: 120%;
   height: 300%;
   background: linear-gradient(
     5deg,
@@ -75,7 +74,7 @@ export const Moon = styled.div`
 
 const cloudMoveHorizontal = keyframes`
   from{
-    transform: translateX(120vh)
+    transform: translateX(120vw)
   }
 
   to {
@@ -101,9 +100,10 @@ interface CloudMoveProps {
 
 export const CloudMove = styled.div<CloudMoveProps>`
   position: absolute;
+  left: 0;
   bottom: ${props => `${props.$bottom}%`};
   animation-name: ${cloudMoveHorizontal};
-  animation-delay: ${props => `${props.$delay}ms`};
+  animation-delay: ${props => `-${props.$delay}ms`};
   animation-duration: ${props => `${props.$duration}ms`};
   animation-timing-function: linear;
   animation-iteration-count: infinite;

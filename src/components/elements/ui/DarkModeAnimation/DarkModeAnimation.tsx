@@ -24,10 +24,9 @@ export const DarkModeAnimation: React.FC = () => {
       <Background>
         {mapCloud().map((e, i) => {
           const bottom = Math.random() * 10 + 13;
-          const delay = Math.random() * 10000;
+          const delay = Math.round(Math.random() * 17000);
           const duration = Math.random() * 5000 + 12000;
           const scale = Math.round(Math.random() * 60) / 100 + 0.6;
-          console.log(bottom, delay, duration);
           return (
             <CloudMove
               key={i}
