@@ -10,7 +10,7 @@ export const BgWrapper = styled.div`
         height: 0;
         width: 100%;
         min-width: 100%;
-        height: 200%;
+        height: 100%;
         min-height: 100vh;
         background-color: white;
         background:

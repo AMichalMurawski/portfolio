@@ -15,6 +15,9 @@ const basicStyle = {
     medium: 1.5,
     big: 1.8,
   },
+  height: {
+    header: 150,
+  },
 };
 
 const lightStyle = {
@@ -25,6 +28,10 @@ const lightStyle = {
   bg: {
     main: '#eee',
     introduction: 'orange',
+  },
+  transform: {
+    sky: 'translate(-10%, -60%)',
+    sun: 'rotate(0)',
   },
   wall: {
     bg: '#666',
@@ -47,6 +54,10 @@ const darkStyle = {
   bg: {
     main: '#444',
     introduction: 'orange',
+  },
+  transform: {
+    sky: 'translate(0, 0)',
+    sun: 'rotate(90deg)',
   },
   wall: {
     bg: '#111',

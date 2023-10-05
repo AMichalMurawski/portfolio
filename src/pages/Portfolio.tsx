@@ -15,18 +15,20 @@ import { ButtonMode } from '../_tests_/ButtonMode';
 const Portfolio: React.FC = () => {
   return (
     <>
-      <PageWindow>
-        <Header />
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        {/* tests components */}
-        <FooConsole />
-        <ButtonMode />
-      </PageWindow>
-      <Background />
+      <Header />
+      <div style={{ position: 'relative' }}>
+        <PageWindow>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+          {/* tests components */}
+          <FooConsole />
+          <ButtonMode />
+        </PageWindow>
+        <Background />
+      </div>
     </>
   );
 };
