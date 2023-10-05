@@ -1,3 +1,4 @@
+export * from './Brick/Brick';
 export * from './ContactForm/ContactForm';
 export * from './DarkModeAnimation/DarkModeAnimation';
 export * from './Introduction/Introduction';

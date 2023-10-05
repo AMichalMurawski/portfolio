@@ -7,7 +7,6 @@ export const BgWrapper = styled.div`
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 0;
         width: 100%;
         min-width: 100%;
         height: 100%;

@@ -17,6 +17,13 @@ const basicStyle = {
   },
   height: {
     header: 150,
+    brick: 40,
+  },
+  width: {
+    brick: 100,
+  },
+  gap: {
+    mortar: 4,
   },
 };
 
@@ -28,6 +35,8 @@ const lightStyle = {
   bg: {
     main: '#eee',
     introduction: 'orange',
+    wall: '#ddd',
+    brick: '#eee',
   },
   transform: {
     sky: 'translate(-10%, -60%)',
@@ -54,6 +63,8 @@ const darkStyle = {
   bg: {
     main: '#444',
     introduction: 'orange',
+    wall: '#111',
+    brick: '#444',
   },
   transform: {
     sky: 'translate(0, 0)',
@@ -72,7 +83,7 @@ const darkStyle = {
   },
 };
 
-export const style = (mode?: ModeType) => ({
+export const style: any = (mode?: ModeType) => ({
   ...basicStyle,
   ...(mode === 'light' ? lightStyle : darkStyle),
 });
