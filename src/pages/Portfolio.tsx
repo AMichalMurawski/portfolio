@@ -2,6 +2,7 @@ import React from 'react';
 import {
   About,
   Background,
+  BackgroundWall,
   Contact,
   Header,
   Home,
@@ -27,7 +28,8 @@ const Portfolio: React.FC = () => {
           <FooConsole />
           <ButtonMode />
         </PageWindow>
-        <Background />
+        {/* <Background /> */}
+        <BackgroundWall />
       </div>
     </>
   );
