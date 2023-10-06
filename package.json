@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "*",
+  "homepage": "https://amichalmurawski.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
