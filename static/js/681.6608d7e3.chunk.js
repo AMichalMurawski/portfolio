@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[681],{681:function(u,e,a){a.r(e);a(791);var n=a(184);e.default=function(){return(0,n.jsx)("div",{children:"Curriculum Vitae Page"})}}}]);
+//# sourceMappingURL=681.6608d7e3.chunk.js.map
