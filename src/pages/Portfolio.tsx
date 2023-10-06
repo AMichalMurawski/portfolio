@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   About,
-  Background,
   BackgroundWall,
   Contact,
   Header,
