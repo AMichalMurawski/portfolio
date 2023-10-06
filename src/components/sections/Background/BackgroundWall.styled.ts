@@ -12,6 +12,7 @@ export const BgWrapper = styled.div`
   flex-direction: column;
   gap: ${props => props.theme.gap.mortar}px;
   background-color: ${props => props.theme.bg.wall};
+  overflow: hidden;
   z-index: -100;
 `;
 

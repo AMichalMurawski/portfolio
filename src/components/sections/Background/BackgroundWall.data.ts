@@ -9,8 +9,11 @@ export const brickRows = (
   if (countRound > count) {
     countRound -= 1;
   }
-  if (type === 'col') {
+  if (type === 'row') {
     countRound += 1;
+  }
+  if (type === 'col') {
+    countRound += 2;
   }
   return Array(countRound).fill(1);
 };

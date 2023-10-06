@@ -3,8 +3,9 @@ import { ModeType } from './types';
 const basicStyle = {
   fontSize: {
     main: '18px',
-    title: '36px',
-    subtitle: '24px',
+    title: '54px',
+    subtitle: '36px',
+    sentence: '24px',
   },
   fontFamily: {
     main: 'Roboto',
@@ -20,7 +21,7 @@ const basicStyle = {
     brick: 40,
   },
   width: {
-    brick: 100,
+    brick: 120,
   },
   gap: {
     mortar: 4,
@@ -30,11 +31,12 @@ const basicStyle = {
 const lightStyle = {
   color: {
     main: 'black',
-    introduction: 'black',
+    introduction: 'rgb(230, 230, 230)',
   },
   bg: {
     main: '#eee',
-    introduction: 'orange',
+    introduction: 'rgba(80, 80, 250, 1)',
+    introduction2: 'rgba(80, 80, 250, 1)',
     wall: '#ddd',
     brick: '#eee',
   },
