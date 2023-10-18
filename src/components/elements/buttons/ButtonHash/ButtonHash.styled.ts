@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { LinkElement } from '../../../../utils/styles/global';
+import { HashLinkElement } from '../../../../utils/styles/global';
 
 const bsStyle = '1px 1px 1px black, 4px 4px 4px red';
 
-export const Button = styled(LinkElement)`
+export const Button = styled(HashLinkElement)`
   padding: 10px;
   border-radius: 10px;
   background-color: ${props => props.theme.btnLink.bg};
