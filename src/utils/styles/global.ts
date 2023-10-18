@@ -1,5 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const headingStyles = (props: any) => `
     color: ${props.theme.color.main};
@@ -45,6 +46,11 @@ export const ButtonElement = styled.button.attrs({ type: 'button' });
 
 export const SubmitElement = styled.button.attrs({ type: 'submit' });
 
-export const LinkElement = styled(HashLink)`
+export const HashLinkElement = styled(Link)`
   text-decoration: none;
+`;
+
+export const LinkElement = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;

@@ -1,2 +1,2 @@
-export * from './ButtonLink/ButtonLink';
+export * from './ButtonHash/ButtonHash';
 export * from './ButtonCV/ButtonCV';

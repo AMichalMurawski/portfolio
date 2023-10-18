@@ -6,5 +6,5 @@ interface ButtonProps {
 }
 
 export const ButtonCV: React.FC<ButtonProps> = ({ linkTo }) => {
-  return <Button to={linkTo}>CV</Button>;
+  return <Button href={linkTo}>CV</Button>;
 };
