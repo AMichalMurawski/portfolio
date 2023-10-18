@@ -1,10 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
-import {
-  LangContext,
-  MediaContext,
-  ModeContext,
-  StyleContext,
-} from './context';
+import { StyleContext } from './ThemeProvider/StyleProvider';
+import { LangContext } from './ThemeProvider/LangProvider';
+import { MediaContext } from './ThemeProvider/MediaProvider';
+import { ModeContext } from './ThemeProvider/ModeProvider';
 
 export const useLang = () => useContext(LangContext);
 

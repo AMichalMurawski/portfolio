@@ -1,3 +1,3 @@
 export * from './MainProvider';
 
-export * from './ThemeProvider/useContext';
+export * from './useContext';

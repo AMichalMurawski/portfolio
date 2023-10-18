@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-  useLang,
-  useMedia,
-  useMode,
-  useStyle,
-} from '../providers/ThemeProvider/useContext';
+import { useLang, useMedia, useMode, useStyle } from '../providers/useContext';
 
 interface IsTrue {
   media: boolean;

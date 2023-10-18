@@ -1,4 +1,4 @@
-import { ModeType } from './types';
+import { ModeType } from '../../providers/ThemeProvider/types';
 
 const basicStyle = {
   fontSize: {
@@ -85,7 +85,7 @@ const darkStyle = {
   },
 };
 
-export const style: any = (mode?: ModeType) => ({
+export const styleData: any = (mode?: ModeType) => ({
   ...basicStyle,
   ...(mode === 'light' ? lightStyle : darkStyle),
 });
