@@ -39,6 +39,7 @@ const lightStyle = {
     introduction2: 'rgba(80, 80, 250, 1)',
     wall: '#ddd',
     brick: '#eee',
+    wallAlpha: 0,
   },
   transform: {
     sky: 'translate(-10%, -60%)',
@@ -67,6 +68,7 @@ const darkStyle = {
     introduction: 'orange',
     wall: '#111',
     brick: '#444',
+    wallAlpha: 0.6,
   },
   transform: {
     sky: 'translate(0, 0)',
