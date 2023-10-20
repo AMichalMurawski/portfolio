@@ -1,6 +1,6 @@
 import React from 'react';
 import { HomeWrapper } from './Home.styled';
-import { Introduction, MyPicture } from '../../elements/ui';
+import { Introduction, MyPicture } from '../../ui';
 
 export const Home: React.FC = () => {
   return (

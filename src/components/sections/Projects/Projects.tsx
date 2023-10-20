@@ -4,9 +4,9 @@ import {
   ProjectWrapper,
   ProjectsContener,
 } from './Projects.styled';
-import { Subtitle } from '../../elements/texts';
+import { Subtitle } from '../../elements';
 import { projects } from '../../../context';
-import { Project } from '../../elements/ui';
+import { Project } from '../../ui';
 
 export const Projects: React.FC = () => {
   return (

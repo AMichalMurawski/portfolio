@@ -7,8 +7,8 @@ import {
   ContactInformationContainer,
   ContactWrapper,
 } from './Contact.styled';
-import { Subtitle } from '../../elements/texts';
-import { ContactForm } from '../../elements/ui';
+import { Subtitle } from '../../elements';
+import { ContactForm } from '../../ui';
 
 const email = 'e-mail: ';
 const phone = 'phone nr: ';
