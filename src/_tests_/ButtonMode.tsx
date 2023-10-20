@@ -4,6 +4,11 @@ import { useMode } from '../providers/useContext';
 export const ButtonMode: React.FC = () => {
   const { mode, toggleMode } = useMode();
 
+  const changeMode = () => {
+    console.log('change mode');
+    toggleMode();
+  };
+
   return (
     <button
       style={{
@@ -13,8 +18,9 @@ export const ButtonMode: React.FC = () => {
         margin: 0,
         padding: '2px',
         fontSize: '14px',
+        zIndex: 900,
       }}
-      onClick={toggleMode}
+      onClick={changeMode}
     >
       {mode}
     </button>
