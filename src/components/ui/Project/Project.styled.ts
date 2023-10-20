@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ImgElement, PElement } from '../../../../utils/styles';
+import { ImgElement, PElement } from '../../../utils/styles';
 
 export const ProjectWrapper = styled.div`
   display: flex;

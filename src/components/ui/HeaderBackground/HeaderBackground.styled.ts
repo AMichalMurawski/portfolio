@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { woodImage } from '../../../../images';
+import { woodImage } from '../../../images';
 
 interface BoardBoxProps {
   $width: number;

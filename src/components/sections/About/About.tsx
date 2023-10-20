@@ -1,5 +1,5 @@
 import React from 'react';
-import { Subtitle } from '../../elements/texts';
+import { Subtitle } from '../../elements';
 import { AboutWrapper, Paragraph } from './About.styled';
 import { aboutMe } from '../../../context';
 

@@ -5,7 +5,7 @@ import {
   Proffesion,
   Sentence,
 } from './Introduction.styled';
-import { groupProps } from '../../types';
+import { groupProps } from '../../elements/types';
 
 export const Introduction: React.FC<groupProps> = ({ wrapperStyles }) => {
   return (

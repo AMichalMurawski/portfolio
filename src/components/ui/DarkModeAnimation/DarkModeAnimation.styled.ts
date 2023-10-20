@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { PageWrapper } from '../../../../pages/Portfolio.styled';
+import { PageWrapper } from '../../../pages/Portfolio.styled';
 
 export const ModeWrapper = styled.div`
   position: absolute;

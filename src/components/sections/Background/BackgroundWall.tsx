@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BgWrapper, BrickLine } from './BackgroundWall.styled';
-import { Brick } from '../../elements/ui';
+import { Brick } from '../../ui';
 import {
   WallDimension,
   brickRows,

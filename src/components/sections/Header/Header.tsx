@@ -5,10 +5,10 @@ import {
   HeaderConst,
   HeaderWrapper,
 } from './Header.styled';
-import { ButtonHash } from '../../elements/buttons';
+import { ButtonHash } from '../../elements';
 import { links } from '../../../context';
 import { useMode } from '../../../providers';
-import { HeaderBackground } from '../../elements/ui';
+import { HeaderBackground } from '../../ui';
 
 export const Header: React.FC = () => {
   const { toggleMode } = useMode();

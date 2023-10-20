@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BgWrapper, Board, BoardsBox } from './HeaderBackground.styled';
-import { useWindowSize } from '../../../../hooks/useWindowSize';
-import { useStyle } from '../../../../providers';
+import { useWindowSize } from '../../../hooks/useWindowSize';
+import { useStyle } from '../../../providers';
 
 type BoardsCount = number[];
 

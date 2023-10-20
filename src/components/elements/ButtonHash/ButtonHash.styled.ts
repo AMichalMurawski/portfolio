@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HashLinkElement } from '../../../../utils/styles/global';
+import { HashLinkElement } from '../../../utils/styles/global';
 
 const bsStyle = '1px 1px 1px black, 4px 4px 4px red';
 

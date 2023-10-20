@@ -1,6 +1,6 @@
 import React from 'react';
 import { SVG, USE } from './IconSvg.styled';
-import icons from '../../../../images/icons.svg';
+import { icons } from '../../../images';
 
 interface IconSvgProps {
   iconName: string;
