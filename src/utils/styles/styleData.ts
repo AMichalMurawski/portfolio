@@ -22,9 +22,17 @@ const basicStyle = {
   },
   width: {
     brick: 120,
+    board: 50,
   },
   gap: {
     mortar: 4,
+  },
+  transition: (props: string | string[]) => {
+    if (typeof props === 'string') {
+      return `${props} ease-in 300ms`;
+    }
+    const trans = props.map(prop => `${prop} ease-in 300ms`).join(', ');
+    return trans;
   },
 };
 
@@ -37,6 +45,7 @@ const lightStyle = {
     main: '#eee',
     introduction: 'rgba(80, 80, 250, 1)',
     introduction2: 'rgba(80, 80, 250, 1)',
+    wall2: 'rgba(0, 0, 0, 0)',
     wall: '#ddd',
     brick: '#eee',
     wallAlpha: 0,
@@ -66,6 +75,7 @@ const darkStyle = {
   bg: {
     main: '#444',
     introduction: 'orange',
+    wall2: 'rgba(0, 0, 0, 0.6)',
     wall: '#111',
     brick: '#444',
     wallAlpha: 0.6,
