@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BgWrapper, Board, BoardsBox } from './HeaderBackground.styled';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import { useStyle } from '../../../providers';
+import { WindowDarkMode } from '../WindowDarkMode/WindowDarkMode';
 
 type BoardsCount = number[];
 
@@ -28,6 +29,7 @@ export const HeaderBackground: React.FC = () => {
   const [boardsCount, setBoardsCount] = useState<BoardsCount>(
     updateBoardsCount([], size, styles.width.board)
   );
+  const [widthBox, setWidthBox] = useState(0);
 
   useEffect(() => {
     const updateArray = updateBoardsCount(
@@ -38,19 +40,17 @@ export const HeaderBackground: React.FC = () => {
     setBoardsCount(updateArray);
   }, [size]);
 
+  useEffect(() => {
+    const width =
+      (boardsCount.length - 1) * (styles.width.board + 0.002 * size) +
+      styles.width.board;
+    setWidthBox(width);
+  }, [boardsCount, size]);
+
   return (
-    <BgWrapper
-      $width={
-        (boardsCount.length - 1) * (styles.width.board + 0.002 * size) +
-        styles.width.board
-      }
-    >
-      <BoardsBox
-        $width={
-          (boardsCount.length - 1) * (styles.width.board + 0.002 * size) +
-          styles.width.board
-        }
-      >
+    <BgWrapper $width={widthBox}>
+      <BoardsBox $width={widthBox}>
+        {/* <WindowDarkMode /> */}
         {boardsCount.map((pos, i) => {
           return <Board key={i} $position={pos} />;
         })}

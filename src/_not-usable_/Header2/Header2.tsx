@@ -4,11 +4,11 @@ import {
   HeaderBox,
   HeaderConst,
   HeaderWrapper,
-} from './Header.styled';
-import { ButtonHash } from '../../elements';
-import { links } from '../../../context';
-import { useMode } from '../../../providers';
-import { DarkModeAnimation } from '../../ui';
+} from '../../components/sections/Header/Header.styled';
+import { ButtonHash } from '../../components/elements';
+import { links } from '../../context';
+import { useMode } from '../../providers';
+import { DarkModeAnimation } from '../DarkModeAnimation/DarkModeAnimation';
 
 export const Header: React.FC = () => {
   const { toggleMode } = useMode();

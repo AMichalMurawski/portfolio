@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PageWrapper } from '../../../pages/Portfolio.styled';
+import { PageWrapper } from '../../pages/Portfolio.styled';
 
 const headerHeight = 140;
 
