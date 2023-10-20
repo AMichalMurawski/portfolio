@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BgWrapper, BrickLine } from './BackgroundWall.styled';
-import { Brick } from '../../ui';
+import { BgWrapper, BrickLine } from './BackgroundWall2.styled';
+import { Brick } from '../../components/ui';
 import {
   WallDimension,
   brickRows,
   initialWallDimension,
-} from './BackgroundWall.data';
-import { useStyle } from '../../../providers';
+} from './BackgroundWall2.data';
+import { useStyle } from '../../providers';
 
 export const BackgroundWall: React.FC = () => {
   const style = useStyle();

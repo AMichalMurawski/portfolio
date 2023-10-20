@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   About,
-  BackgroundWall,
+  Background,
   Contact,
   Header,
   Home,
@@ -11,7 +11,6 @@ import {
 import { FooConsole } from '../_tests_/FooConsole';
 import { PageWindow } from './Portfolio.styled';
 import { ButtonMode } from '../_tests_/ButtonMode';
-import { BackgroundWall2 } from '../components/sections/Background/BackgroundWall2';
 
 const Portfolio: React.FC = () => {
   return (
@@ -29,7 +28,7 @@ const Portfolio: React.FC = () => {
           <ButtonMode />
         </PageWindow>
         {/* <Background /> */}
-        <BackgroundWall2 />
+        <Background />
       </div>
     </>
   );

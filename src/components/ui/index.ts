@@ -1,4 +1,4 @@
-export * from './Brick/Brick';
+export * from '../elements/Brick/Brick';
 export * from './ContactForm/ContactForm';
 export * from './DarkModeAnimation/DarkModeAnimation';
 export * from './HeaderBackground/HeaderBackground';
