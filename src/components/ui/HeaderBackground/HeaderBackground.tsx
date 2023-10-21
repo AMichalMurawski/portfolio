@@ -38,19 +38,19 @@ export const HeaderBackground: React.FC = () => {
       styles.width.board
     );
     setBoardsCount(updateArray);
-  }, [size]);
+  }, [size, boardsCount, styles]);
 
   useEffect(() => {
     const width =
       (boardsCount.length - 1) * (styles.width.board + 0.002 * size) +
       styles.width.board;
     setWidthBox(width);
-  }, [boardsCount, size]);
+  }, [boardsCount, size, styles]);
 
   return (
     <BgWrapper $width={widthBox}>
       <BoardsBox $width={widthBox}>
-        {/* <WindowDarkMode /> */}
+        <WindowDarkMode />
         {boardsCount.map((pos, i) => {
           return <Board key={i} $position={pos} />;
         })}

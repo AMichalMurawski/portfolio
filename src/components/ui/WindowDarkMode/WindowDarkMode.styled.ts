@@ -6,10 +6,10 @@ const windowProps = {
 
 export const WindowBox = styled.div`
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: calc(50% - 150px);
   width: 200px;
-  height: 100px;
+  height: 120px;
   transform: translate(-50%, -50%);
   background-color: white;
   border-top-left-radius: ${windowProps.border};
@@ -18,6 +18,7 @@ export const WindowBox = styled.div`
 
 type WindowFrameProps = {
   $side: 'left' | 'right';
+  $mode: 'light' | 'dark';
 };
 
 export const WindowFrame = styled.div<WindowFrameProps>`
@@ -29,4 +30,9 @@ export const WindowFrame = styled.div<WindowFrameProps>`
   border: 2px solid black;
   border-top-${props => props.$side}-radius: ${windowProps.border};
   background-image: linear-gradient(to right, transparent 49%, #000 49%, #000 51%, transparent 51%), linear-gradient(to bottom, transparent 49%, #000 49%, #000 51%, transparent 51%);
-`;
+  transform: perspective(800px) rotateY(${props =>
+    props.$mode === 'light' ? 120 : 0}deg) ;
+  perspective-origin: left;
+  transform-origin: ${props => props.$side};
+  transition: ${props => props.theme.transition('transform')};
+  `;

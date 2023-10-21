@@ -12,7 +12,6 @@ export const BgWrapper = styled.div<BoardBoxProps>`
   transform: translateX(-50%);
   width: ${props => props.$width}px;
   height: 100%;
-  z-index: -10;
   overflow: hidden;
 `;
 

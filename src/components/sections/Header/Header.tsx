@@ -17,9 +17,9 @@ export const Header: React.FC = () => {
     <>
       <HeaderConst></HeaderConst>
       <HeaderBox>
-        <HeaderBackground />
-        <WindowDarkMode />
+        {/* <WindowDarkMode /> */}
         <HeaderWrapper>
+          <HeaderBackground />
           <div
             style={{
               width: '80px',
@@ -33,6 +33,7 @@ export const Header: React.FC = () => {
               padding: 0,
               lineHeight: 1,
               boxShadow: 'inset 0 0 10px 4px gray',
+              zIndex: 1,
             }}
           >
             Logo
