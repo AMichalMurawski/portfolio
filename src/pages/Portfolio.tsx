@@ -10,7 +10,6 @@ import {
 } from '../components/sections';
 import { FooConsole } from '../_tests_/FooConsole';
 import { PageWindow } from './Portfolio.styled';
-import { ButtonMode } from '../_tests_/ButtonMode';
 
 const Portfolio: React.FC = () => {
   return (

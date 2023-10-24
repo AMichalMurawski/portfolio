@@ -114,10 +114,6 @@ export const CloudBox = styled.div`
   animation-iteration-count: infinite;
 `;
 
-interface CloudProps {
-  $scale: number;
-}
-
 export const Clouds = styled.div`
   width: 100px;
   height: 30px;
