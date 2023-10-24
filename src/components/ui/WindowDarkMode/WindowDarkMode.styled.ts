@@ -65,22 +65,54 @@ export const WindowBg = styled.div`
 
 export const BgSky = styled.div`
   position: absolute:
-  left: -10%;
-  top: -10%;
-  width: 120%;
-  height: 150%;
-  background-color: lightblue;
-  transform: translateY(-15%) rotateX(45deg);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 160%;
+  background-color: ${props => props.theme.bg.sky};
+  transform: perspective(100vw) translateY(-20%) rotateX(45deg);
+`;
+
+export const SunRotate = styled.div`
+  position: absolute;
+  top: 290px;
+  left: 200px;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%)
+    rotateZ(${props => props.theme.transform.sun}deg);
+  transition: ${props => props.theme.transition('transform')};
 `;
 
 export const Sun = styled.div`
   position: absolute;
-  left: 15%;
-  top: 10%;
+  left: 25%;
+  top: 5%;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: yellow;
+`;
+
+export const MoonRotate = styled.div`
+  position: absolute;
+  top: 290px;
+  left: 200px;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%)
+    rotateZ(${props => props.theme.transform.moon}deg);
+  transition: ${props => props.theme.transition('transform')};
+`;
+
+export const Moon = styled.div`
+  position: absolute;
+  left: 25%;
+  top: 5%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gray;
 `;
 
 const cloudMoveHorizontal = keyframes`
@@ -89,7 +121,7 @@ const cloudMoveHorizontal = keyframes`
   }
 
   to {
-    transform: translateX(-100%)
+    transform: translateX(-120%)
   }
 `;
 
@@ -109,7 +141,7 @@ export const CloudBox = styled.div`
   top: 30%;
   animation-name: ${cloudMoveHorizontal};
   animation-delay: 3ms;
-  animation-duration: 10s;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 `;
@@ -118,18 +150,14 @@ export const Clouds = styled.div`
   width: 100px;
   height: 30px;
   border-radius: 50px;
-  background: linear-gradient(
-    180deg,
-    rgb(242, 249, 254) 5%,
-    rgb(214, 240, 253) 100%
-  );
-  animation: ${cloudMoveVertical} 1000ms alternate-reverse ease-in-out infinite;
+  background: ${props => props.theme.bg.cloud};
+  animation: ${cloudMoveVertical} 5s alternate-reverse ease-in-out infinite;
 
   &:after,
   &:before {
     content: '';
     position: absolute;
-    background-color: #f2f9fe;
+    background-color: ${props => props.theme.bg.cloud2};
     border-radius: 50px;
     z-index: -200;
   }

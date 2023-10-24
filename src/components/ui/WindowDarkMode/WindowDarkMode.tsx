@@ -3,7 +3,10 @@ import {
   BgSky,
   CloudBox,
   Clouds,
+  Moon,
+  MoonRotate,
   Sun,
+  SunRotate,
   WindowBg,
   WindowBox,
   WindowFrame,
@@ -17,7 +20,12 @@ export const WindowDarkMode: React.FC = () => {
     <WindowBox onClick={toggleMode}>
       <WindowBg>
         <BgSky>
-          <Sun />
+          <SunRotate>
+            <Sun />
+          </SunRotate>
+          <MoonRotate>
+            <Moon />
+          </MoonRotate>
           <CloudBox>
             <Clouds />
           </CloudBox>

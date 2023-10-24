@@ -47,13 +47,17 @@ const lightStyle = {
     wall: '#ddd',
     brick: '#eee',
     wallAlpha: 0,
+    cloud:
+      'linear-gradient(180deg, rgb(242, 249, 254) 5%, rgb(214, 240, 253) 100%)',
+    cloud2: 'rgb(242, 249, 254)',
+    sky: 'lightblue',
   },
   filter: {
     brightness: 100,
   },
   transform: {
-    sky: 'translate(-10%, -60%)',
-    sun: 'rotate(0)',
+    sun: 0,
+    moon: -30,
   },
   wall: {
     bg: '#666',
@@ -79,13 +83,17 @@ const darkStyle = {
     wall: '#111',
     brick: '#444',
     wallAlpha: 0.6,
+    cloud:
+      'linear-gradient(180deg, rgb(182, 189, 194) 5%, rgb(154, 180, 193) 100%)',
+    cloud2: 'rgb(182, 189, 194)',
+    sky: 'darkblue',
   },
   filter: {
     brightness: 50,
   },
   transform: {
-    sky: 'translate(0, 0)',
-    sun: 'rotate(90deg)',
+    sun: -30,
+    moon: 0,
   },
   wall: {
     bg: '#111',
