@@ -9,10 +9,9 @@ export const BgWrapper = styled.div<BoardBoxProps>`
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   width: ${props => props.$width}px;
   height: 100%;
-  z-index: -10;
+  transform: translateX(-50%);
   overflow: hidden;
 `;
 
@@ -27,6 +26,8 @@ export const BoardsBox = styled.div<BoardBoxProps>`
   gap: 0.2vw;
   background-color: black;
   transform: translateY(-10%) perspective(50vw) rotateX(-45deg);
+  filter: brightness(${props => props.theme.filter.brightness}%);
+  transition: ${props => props.theme.transition('filter')};
 `;
 
 interface BoardProps {

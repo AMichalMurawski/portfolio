@@ -23,13 +23,11 @@ const Portfolio: React.FC = () => {
           <Skills />
           <Projects />
           <Contact />
-          {/* tests components */}
-          <FooConsole />
-          <ButtonMode />
         </PageWindow>
-        {/* <Background /> */}
         <Background />
       </div>
+      {/* tests components */}
+      <FooConsole />
     </>
   );
 };

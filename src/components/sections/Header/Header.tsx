@@ -8,7 +8,7 @@ import {
 import { ButtonHash } from '../../elements';
 import { links } from '../../../context';
 import { useMode } from '../../../providers';
-import { HeaderBackground } from '../../ui';
+import { HeaderBackground, WindowDarkMode } from '../../ui';
 
 export const Header: React.FC = () => {
   const { toggleMode } = useMode();
@@ -17,8 +17,9 @@ export const Header: React.FC = () => {
     <>
       <HeaderConst></HeaderConst>
       <HeaderBox>
-        <HeaderBackground />
+        {/* <WindowDarkMode /> */}
         <HeaderWrapper>
+          <HeaderBackground />
           <div
             style={{
               width: '80px',
@@ -32,6 +33,7 @@ export const Header: React.FC = () => {
               padding: 0,
               lineHeight: 1,
               boxShadow: 'inset 0 0 10px 4px gray',
+              zIndex: 1,
             }}
           >
             Logo

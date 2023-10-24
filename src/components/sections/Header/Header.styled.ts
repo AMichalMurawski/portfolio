@@ -29,4 +29,5 @@ export const HeaderWrapper = styled(PageWrapper)`
 export const ButtonsList = styled.ul`
   display: flex;
   gap: 25px;
+  z-index: 1;
 `;
