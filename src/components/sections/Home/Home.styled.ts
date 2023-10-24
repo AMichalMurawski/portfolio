@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PageWrapper } from '../../../pages/Portfolio.styled';
+import { PageWrapper } from '../../../App.styled';
 
 export const HomeWrapper = styled(PageWrapper)`
   padding: 30px;
