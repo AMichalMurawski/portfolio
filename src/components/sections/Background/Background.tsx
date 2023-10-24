@@ -1,11 +1,6 @@
 import React from 'react';
-import { BgDarkMode, BgImage, BgWrapper } from './Background.styled';
+import { BgImage } from './Background.styled';
 
 export const Background: React.FC = () => {
-  return (
-    <BgWrapper>
-      <BgImage />
-      <BgDarkMode />
-    </BgWrapper>
-  );
+  return <BgImage />;
 };
