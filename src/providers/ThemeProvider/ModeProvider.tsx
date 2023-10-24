@@ -1,5 +1,5 @@
 import React, { createContext, PropsWithChildren, useState } from 'react';
-import { LangState, LangType, ModeState, ModeType } from './types';
+import { ModeState, ModeType } from './types';
 
 const defaultMode: ModeState = {
   mode: 'light',

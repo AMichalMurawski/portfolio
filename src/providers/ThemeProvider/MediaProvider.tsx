@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, useState } from 'react';
+import React, { createContext, PropsWithChildren } from 'react';
 import { useMediaQuery } from '../useContext';
 import { MediaState } from './types';
 

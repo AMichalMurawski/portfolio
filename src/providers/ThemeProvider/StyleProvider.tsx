@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, useState } from 'react';
+import React, { createContext, PropsWithChildren } from 'react';
 import {} from './types';
 import { styleData } from '../../utils/styles';
 import { useMode } from '../useContext';

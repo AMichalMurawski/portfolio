@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { useLang, useMedia, useMode, useStyle } from '../useContext';
+import { useLang, useMedia, useMode } from '../useContext';
 import { ThemeProvider } from 'styled-components';
 import { styleData } from '../../utils/styles';
 

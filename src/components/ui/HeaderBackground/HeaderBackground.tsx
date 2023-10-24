@@ -38,14 +38,14 @@ export const HeaderBackground: React.FC = () => {
       styles.width.board
     );
     setBoardsCount(updateArray);
-  }, [size, boardsCount, styles]);
+  }, [size, boardsCount, styles.width.board]);
 
   useEffect(() => {
     const width =
       (boardsCount.length - 1) * (styles.width.board + 0.002 * size) +
       styles.width.board;
     setWidthBox(width);
-  }, [boardsCount, size, styles]);
+  }, [boardsCount, size, styles.width.board]);
 
   return (
     <BgWrapper $width={widthBox}>
