@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+  BirdBox,
+  BirdWingBox,
   CloudBox,
   Clouds,
   LandscapeWrapper,
@@ -29,6 +31,10 @@ export const Landscape: React.FC = () => {
       <CloudBox $delay={6} $duration={25}>
         <Clouds />
       </CloudBox>
+      <BirdBox>
+        <BirdWingBox $side="left"></BirdWingBox>
+        <BirdWingBox $side="right"></BirdWingBox>
+      </BirdBox>
     </LandscapeWrapper>
   );
 };
