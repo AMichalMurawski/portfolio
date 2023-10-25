@@ -19,48 +19,42 @@ export const Sky = styled.div`
   transform: perspective(100vw) translateY(-20%) rotateX(45deg);
 `;
 
-export const SunRotate = styled.div`
+const SunMoonRotate = styled.div`
   position: absolute;
   top: 290px;
   left: 200px;
   width: 600px;
   height: 600px;
-  transform: translate(-50%, -50%)
-    rotateZ(${props => props.theme.transform.sun}deg);
   transition: ${props => props.theme.transition('transform')};
 `;
 
-export const Sun = styled.div`
+const SunMoon = styled.div`
   position: absolute;
   left: 25%;
   top: 5%;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+`;
+
+export const SunRotate = styled(SunMoonRotate)`
+  transform: translate(-50%, -50%)
+    rotateZ(${props => props.theme.transform.sun}deg);
+`;
+
+export const Sun = styled(SunMoon)`
   background-color: yellow;
   box-shadow: 0 0 2px 1px yellow, 0 0 4px 2px yellow, 0 0 6px 3px yellow,
     0 0 8px 4px yellow, 0 0 10px 5px yellow;
 `;
 
-export const MoonRotate = styled.div`
-  position: absolute;
-  top: 290px;
-  left: 200px;
-  width: 600px;
-  height: 600px;
+export const MoonRotate = styled(SunMoonRotate)`
   transform: translate(-50%, -50%)
     rotateZ(${props => props.theme.transform.moon}deg);
-  transition: ${props => props.theme.transition('transform')};
 `;
 
-export const Moon = styled.div`
-  position: absolute;
-  left: 25%;
-  top: 5%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: gray;
+export const Moon = styled(SunMoon)`
+  background: linear-gradient(-45deg, #eef0f5, rgba(0, 0, 255, 0));
 `;
 
 const cloudMoveHorizontal = keyframes`
@@ -134,21 +128,26 @@ export const Clouds = styled.div`
 
 const birdMove = keyframes`
     0% {
-        bottom: -10%;
+        bottom: -20%;
+        left: 50%;
+        transform: scale(100%);
+        opacity: 1;
+    }
+
+    50% {
+        bottom: -20%;
         left: 50%;
         transform: scale(100%);
         opacity: 1;
     }
     
-    60% {
-        bottom: 10%;
-        left: 60%;
+    80% {
         transform: scale(70%);
         opacity: 1;
     }
 
     100% {
-        bottom: 30%;
+        bottom: 40%;
         left: 70%;
         transform: scale(50%);
         opacity: 0;
@@ -159,9 +158,9 @@ export const BirdBox = styled.div`
   position: absolute;
   width: 30px;
   height: 15px;
-  bottom: -10%;
+  bottom: -20%;
   left: 50%;
-  animation: ${birdMove} 4s ease-in-out infinite;
+  animation: ${birdMove} 6s ease-out infinite;
 `;
 
 interface BirdWingBoxProps {
@@ -198,7 +197,7 @@ export const BirdWingBox = styled.div<BirdWingBoxProps>`
     width: 100%;
     height: 100%;
     border-top: 1px solid black;
-    animation: ${props => birdFly(props.$side)} 800ms alternate-reverse
+    animation: ${props => birdFly(props.$side)} 500ms alternate-reverse
       ease-in-out infinite;
 
     ${props => {
@@ -210,5 +209,58 @@ export const BirdWingBox = styled.div<BirdWingBoxProps>`
         
         `;
     }}
+  }
+`;
+
+const starShine = keyframes`
+  0% {
+    box-shadow: 0 0 5px 1px lightgray, 0 0 10px 2px lightgray;
+  }
+
+  100% {
+    box-shadow: 0 0 5px 1px white, 0 0 10px 2px white;
+  }
+`;
+
+interface StarProps {
+  $left: number;
+  $top: number;
+  $scale: number;
+  $duration: number;
+  $mode: 'light' | 'dark';
+}
+
+export const Star = styled.div<StarProps>`
+  position: absolute;
+  left: ${props => props.$left}%;
+  top: ${props => props.$top}%;
+  width: 10px;
+  height: 10px;
+  opacity: ${props => (props.$mode === 'dark' ? 1 : 0)};
+  visibility: ${props => (props.$mode === 'dark' ? 'visible' : 'hidden')};
+  transition: ${props => props.theme.transition(['visibility', 'opacity'])};
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(${props => props.$scale});
+    background-color: lightgray;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px lightgray, 0 0 10px 2px lightgray;
+    animation: ${starShine} ${props => props.$duration + 1000}ms
+      alternate-reverse ease-in-out infinite;
+  }
+
+  &::before {
+    width: 10%;
+    height: 100%;
+  }
+
+  &::after {
+    width: 100%;
+    height: 10%;
   }
 `;
