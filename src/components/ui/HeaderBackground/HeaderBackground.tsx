@@ -3,6 +3,7 @@ import { BgWrapper, Board, BoardsBox } from './HeaderBackground.styled';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import { useStyle } from '../../../providers';
 import { WindowDarkMode } from '../WindowDarkMode/WindowDarkMode';
+import { DarkMode } from '../DarkMode/DarkMode';
 
 type BoardsCount = number[];
 
@@ -50,7 +51,8 @@ export const HeaderBackground: React.FC = () => {
   return (
     <BgWrapper $width={widthBox}>
       <BoardsBox $width={widthBox}>
-        <WindowDarkMode />
+        <DarkMode />
+        {/* <WindowDarkMode /> */}
         {boardsCount.map((pos, i) => {
           return <Board key={i} $position={pos} />;
         })}
