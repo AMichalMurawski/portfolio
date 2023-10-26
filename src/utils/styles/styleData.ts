@@ -48,8 +48,8 @@ const lightStyle = {
     brick: '#eee',
     wallAlpha: 0,
     cloud:
-      'linear-gradient(180deg, rgb(242, 249, 254) 5%, rgb(214, 240, 253) 100%)',
-    cloud2: 'rgb(242, 249, 254)',
+      'linear-gradient(180deg, rgba(242, 249, 254, 0.8) 5%, rgba(214, 240, 253, 0.8) 100%)',
+    cloud2: 'rgba(242, 249, 254, 0.8)',
     sky: 'lightblue',
   },
   filter: {
