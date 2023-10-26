@@ -9,19 +9,15 @@ const cratersArray = [
 ];
 
 export const SunMoon: React.FC = () => {
-  const [first, setFirst] = useState<boolean>(true);
   const [rotate, setRotate] = useState<number>(0);
   const { mode } = useMode();
 
   useEffect(() => {
-    if (first === false) {
+    if (
+      (mode === 'light' && rotate % 120 === 60) ||
+      (mode === 'dark' && rotate % 120 === 0)
+    ) {
       setRotate(rotate + 60);
-    } else if (mode === 'light') {
-      setRotate(0);
-      setFirst(false);
-    } else if (mode === 'dark') {
-      setRotate(60);
-      setFirst(false);
     }
   }, [mode]);
 
