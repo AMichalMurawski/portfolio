@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import { DarkModeWindowBorders, darkModeElement } from './DarkMode.styled';
 
 export const WindowWrapper = styled(DarkModeWindowBorders)`
-  border: 2px solid black;
+  border: 3px solid #320b00;
 `;
 
 type WindowFrameProps = {
   $side: 'left' | 'right';
   $mode: 'light' | 'dark';
+  $translateZ: number;
+  $glass: boolean;
 };
 
 export const Frame = styled.div<WindowFrameProps>`
@@ -15,31 +17,34 @@ export const Frame = styled.div<WindowFrameProps>`
   top: 0;
   width: 50%;
   height: 100%;
-  border: 2px solid black;
-  background-color: rgba(250, 250, 250, 0.15);
+  border: 2px solid #320b00;
   background-image: linear-gradient(
       to right,
-      transparent 49%,
-      #000 49%,
-      #000 51%,
-      transparent 51%
+      transparent 48%,
+      #320b00 48%,
+      #320b00 52%,
+      transparent 52%
     ),
     linear-gradient(
       to bottom,
-      transparent 49%,
-      #000 49%,
-      #000 51%,
-      transparent 51%
+      transparent 48%,
+      #320b00 48%,
+      #320b00 52%,
+      transparent 52%
     );
+
   ${props => {
-    const { $side, $mode, theme } = props;
-    return `${$side}: 0;
-            border-top-${$side}-radius: ${darkModeElement.border}px;
-            transform: perspective(800px)
-              rotateY(${
-                $side === 'left' ? ($mode === 'light' ? 240 : 360) : ''
-              }${$side === 'right' ? ($mode === 'light' ? 120 : 0) : ''}deg);
-            transform-origin: ${$side};
-            transition: ${theme.transition('transform')};`;
+    const { $side, $mode, $translateZ, $glass, theme } = props;
+    return `
+      ${$side}: 0;
+      ${$glass ? 'background-color: rgba(250, 250, 250, 0.3);' : ''}
+      border-top-${$side}-radius: ${darkModeElement.border}px;
+      transform: perspective(800px) rotateY(${
+        $side === 'left' ? ($mode === 'light' ? 240 : 360) : ''
+      }${
+      $side === 'right' ? ($mode === 'light' ? 120 : 0) : ''
+    }deg) translateZ(-${$translateZ}px);
+      transform-origin: ${$side};
+      transition: ${theme.transition('transform')};`;
   }}
 `;
