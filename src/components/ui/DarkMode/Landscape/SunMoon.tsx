@@ -19,7 +19,7 @@ export const SunMoon: React.FC = () => {
     ) {
       setRotate(rotate + 60);
     }
-  }, [mode]);
+  }, [mode, rotate]);
 
   return (
     <>
