@@ -1,36 +1,42 @@
 import styled from 'styled-components';
 
-const SunMoonRotate = styled.div`
+interface SunMoonRotateProps {
+  $rotate: number;
+}
+
+export const SunMoonRotate = styled.div<SunMoonRotateProps>`
   position: absolute;
-  top: 290px;
-  left: 200px;
+  top: 200%;
+  left: 50%;
   width: 600px;
   height: 600px;
+  transition: ${props => props.theme.transition('transform')};
+  transform: translate(-50%, -50%) rotateZ(${props => props.$rotate}deg);
+`;
+
+export const SunMoonBox = styled.div<SunMoonRotateProps>`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: rotateZ(${props => props.$rotate}deg);
   transition: ${props => props.theme.transition('transform')};
 `;
 
 const SunMoon = styled.div`
   position: absolute;
-  left: 25%;
-  top: 5%;
+  left: 46%;
+  top: 22%;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-`;
-
-export const SunRotate = styled(SunMoonRotate)`
-  transform: translate(-50%, -50%)
-    rotateZ(${props => props.theme.transform.sun}deg);
+  transform: translate(-50%, -50%);
 `;
 
 export const Sun = styled(SunMoon)`
   background-color: rgb(255, 255, 230);
   box-shadow: 0px 0px 20px 7px rgb(255, 255, 230);
-`;
-
-export const MoonRotate = styled(SunMoonRotate)`
-  transform: translate(-50%, -50%)
-    rotateZ(${props => props.theme.transform.moon}deg);
 `;
 
 export const Moon = styled(SunMoon)`
@@ -42,30 +48,6 @@ export const Moon = styled(SunMoon)`
   box-shadow: inset -5px 4px 3px -2px rgb(250, 250, 250),
     inset 10px -10px 25px 22px rgba(100, 100, 100, 0.5),
     4px -3px 14px 8px rgba(255, 255, 255, 0.3215686275);
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   border-radius: 50%;
-  //   background-image: radial-gradient(
-  //       circle at 30% 30%,
-  //       #999 0%,
-  //       #888 10%,
-  //       transparent 10%,
-  //       transparent 100%
-  //     ),
-  //     radial-gradient(
-  //       circle at 30% 30%,
-  //       #999 0%,
-  //       #888 10%,
-  //       transparent 10%,
-  //       transparent 100%
-  //     );
-  // }
 `;
 
 interface CraterProps {

@@ -11,7 +11,7 @@ import {
   WindowBox,
   WindowFrame,
 } from './WindowDarkMode.styled';
-import { useMode } from '../../../providers';
+import { useMode } from '../../providers';
 
 export const WindowDarkMode: React.FC = () => {
   const { mode, toggleMode } = useMode();
