@@ -5,6 +5,7 @@ const flickeringStartTimes = [15, 30, 45, 50, 55, 80, 92, 98];
 
 const flickeringStart = keyframes`
   0%, ${flickeringStartTimes.map(e => `${e - 2}%, ${e + 2}%`).join(', ')} {
+    color: #a0ffff;
     text-shadow: 0 0 7px #00f7ff, 0 0 10px #00f7ff, 0 0 21px #00f7ff,
       0 0 42px #00f7ff, 0 0 82px #00f7ff, 0 0 92px #00f7ff, 0 0 102px #00f7ff,
       0 0 151px #00f7ff;
@@ -14,6 +15,7 @@ const flickeringStart = keyframes`
   } 
   
   ${flickeringStartTimes.map(e => `${e - 1}%, ${e + 1}%`).join(', ')} {
+    color: lightgray;
     text-shadow: 0 0 #00f7ff;
     box-shadow: 0 0 #00f7ff;
   }
@@ -21,6 +23,7 @@ const flickeringStart = keyframes`
 
 const flickering = keyframes`
   0%, 20.9%, 21.9%, 22.5%, 58.9%, 60.9%, 61.5% {
+    color: #a0ffff;
     text-shadow: 0 0 7px #00f7ff, 0 0 10px #00f7ff, 0 0 21px #00f7ff,
       0 0 42px #00f7ff, 0 0 82px #00f7ff, 0 0 92px #00f7ff, 0 0 102px #00f7ff,
       0 0 151px #00f7ff;
@@ -30,6 +33,7 @@ const flickering = keyframes`
   }  
 
   21%, 22%, 59%, 61% {
+    color: lightgray;
     text-shadow: 0 0 #00f7ff;
     box-shadow: 0 0 #00f7ff;
   }
@@ -59,23 +63,24 @@ export const IntroductionWrapper = styled.div`
 
 export const Proffesion = styled(H2Element)`
   color: inherit;
-  font-family: 'Segoe UI', sans-serif;
-  font-weight: 400;
+  font-family: 'Edu TAS Beginner', sans-serif;
+  font-weight: 700;
   margin-bottom: 15px;
 `;
 
 export const Name = styled(H1Element)`
   color: inherit;
-  font-family: 'Sacramento', sans-serif;
+  font-family: 'Dancing Script', sans-serif;
   font-weight: 400;
 `;
 
 export const Sentence = styled.p`
   padding-top: 10px;
-  font-family: 'Yellowtail', sans-serif;
-  font-weight: 500;
+  font-family: 'Edu TAS Beginner', sans-serif;
+  font-weight: 700;
   font-size: 18px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   line-height: ${props => props.theme.lineHeight.medium};
-  color: #5050ff;
+  color: ${props => props.theme.color.introduction_sentence};
+  transition: ${props => props.theme.transition('color')};
 `;
