@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Sub } from './Subtitle.styled';
-import { TextsProps } from '../types';
 
-export const Subtitle: React.FC<TextsProps> = ({ children }) => {
+export const Subtitle: React.FC<PropsWithChildren> = ({ children }) => {
   return <Sub>{children}</Sub>;
 };
