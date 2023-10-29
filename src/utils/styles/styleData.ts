@@ -84,7 +84,7 @@ const lightStyle = {
   color: {
     main: 'black',
     introduction_sentence: '#509fef',
-    subtilte: '#509fefcc',
+    subtilte: '#90ffff',
   },
   bg: {
     main: '#eee',
@@ -122,7 +122,7 @@ const darkStyle = {
     main: 'white',
     introduction_sentence: '#50dfef',
     // subtilte: '#50dfef80',
-    subtilte: '#509fef',
+    subtilte: '#a0ffff',
   },
   bg: {
     main: '#444',
