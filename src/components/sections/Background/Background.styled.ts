@@ -10,7 +10,7 @@ export const BgImage = styled.div`
   background-image: url(${bgImage});
   background-position: center;
   background-size: cover;
-  filter: brightness(${props => props.theme.filter.brightness}%);
-  transition: ${props => props.theme.transition('filter')};
+  filter: brightness(${({ theme }) => theme.filter.brightness}%);
+  transition: ${({ theme }) => theme.transition('filter')};
   z-index: -10;
 `;

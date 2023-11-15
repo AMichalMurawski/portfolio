@@ -10,8 +10,8 @@ export const HomeWrapper = styled(PageWrapper)`
 
 export const Introduce = styled.div`
   padding: 30px;
-  color: ${props => props.theme.color.main};
-  background-color: ${props => props.theme.bg.introduce};
+  color: ${({ theme }) => theme.color.main};
+  background-color: ${({ theme }) => theme.bg.introduce};
   border-radius: 30px;
   height: min-content;
   margin: 15% 0 0;

@@ -26,8 +26,8 @@ export const BoardsBox = styled.div<BoardBoxProps>`
   gap: 0.2vw;
   background-color: black;
   transform: translateY(-10%) perspective(50vw) rotateX(-45deg);
-  filter: brightness(${props => props.theme.filter.brightness}%);
-  transition: ${props => props.theme.transition('filter')};
+  filter: brightness(${({ theme }) => theme.filter.brightness}%);
+  transition: ${({ theme }) => theme.transition('filter')};
 `;
 
 interface BoardProps {
@@ -35,7 +35,7 @@ interface BoardProps {
 }
 
 export const Board = styled.div<BoardProps>`
-  width: ${props => props.theme.width.board}px;
+  width: ${({ theme }) => theme.width.board}px;
   height: 100%;
   background-color: brown;
   background-image: url(${woodImage});

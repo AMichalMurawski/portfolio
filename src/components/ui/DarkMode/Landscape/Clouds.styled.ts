@@ -40,7 +40,7 @@ export const Cloud = styled.div`
   width: 100px;
   height: 30px;
   border-radius: 50px;
-  background: ${props => props.theme.bg.cloud};
+  background: ${({ theme }) => theme.bg.cloud};
   animation: ${cloudMoveVertical} 5s alternate-reverse ease-in-out infinite;
   box-shadow: 0 0 10px 10px 10px white;
   filter: blur(5px);
@@ -49,7 +49,7 @@ export const Cloud = styled.div`
   &:before {
     content: '';
     position: absolute;
-    background-color: ${props => props.theme.bg.cloud2};
+    background-color: ${({ theme }) => theme.bg.cloud2};
     border-radius: 50px;
     z-index: -200;
   }
