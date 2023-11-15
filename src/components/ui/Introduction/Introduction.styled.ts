@@ -43,8 +43,8 @@ const flickering = keyframes`
 
 export const IntroductionWrapper = styled.div`
   padding: 30px;
-  color: ${props => props.theme.color.introduction};
-  // background-color: ${props => props.theme.bg.introduction};
+  color: ${({ theme }) => theme.color.introduction};
+  // background-color: ${({ theme }) => theme.bg.introduction};
   border: 0 solid #a0ffff;
   border-radius: 30px;
   height: min-content;
@@ -63,24 +63,21 @@ export const IntroductionWrapper = styled.div`
 
 export const Proffesion = styled(H2Element)`
   color: inherit;
-  font-family: 'Edu TAS Beginner', sans-serif;
-  font-weight: 700;
+  ${({ theme }) => theme.fontFamily.EduTASBeginner700}
   margin-bottom: 15px;
 `;
 
 export const Name = styled(H1Element)`
   color: inherit;
-  font-family: 'Dancing Script', sans-serif;
-  font-weight: 400;
+  ${({ theme }) => theme.fontFamily.DancingScript400}
 `;
 
 export const Sentence = styled.p`
   padding-top: 10px;
-  font-family: 'Edu TAS Beginner', sans-serif;
-  font-weight: 700;
+  ${({ theme }) => theme.fontFamily.EduTASBeginner700}
   font-size: 18px;
   letter-spacing: 0.2em;
-  line-height: ${props => props.theme.lineHeight.medium};
-  color: ${props => props.theme.color.introduction_sentence};
-  transition: ${props => props.theme.transition('color')};
+  line-height: ${({ theme }) => theme.lineHeight.medium};
+  color: ${({ theme }) => theme.color.introduction_sentence};
+  transition: ${({ theme }) => theme.transition('color')};
 `;

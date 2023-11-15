@@ -10,7 +10,7 @@ export const SunMoonRotate = styled.div<SunMoonRotateProps>`
   left: 50%;
   width: 600px;
   height: 600px;
-  transition: ${props => props.theme.transition('transform')};
+  transition: ${({ theme }) => theme.transition('transform')};
   transform: translate(-50%, -50%) rotateZ(${props => props.$rotate}deg);
 `;
 
@@ -21,7 +21,7 @@ export const SunMoonBox = styled.div<SunMoonRotateProps>`
   left: 0;
   top: 0;
   transform: rotateZ(${props => props.$rotate}deg);
-  transition: ${props => props.theme.transition('transform')};
+  transition: ${({ theme }) => theme.transition('transform')};
 `;
 
 const SunMoon = styled.div`

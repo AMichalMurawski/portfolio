@@ -6,9 +6,9 @@ export const SkyWraper = styled.div`
   top: 0;
   width: 100%;
   height: 160%;
-  background-color: ${props => props.theme.bg.sky};
+  background-color: ${({ theme }) => theme.bg.sky};
   transform: perspective(100vw) translateY(-20%) rotateX(45deg);
-  transition: ${props => props.theme.transition('background-color')};
+  transition: ${({ theme }) => theme.transition('background-color')};
 `;
 
 const starShine = keyframes`
@@ -37,7 +37,7 @@ export const Star = styled.div<StarProps>`
   height: 10px;
   opacity: ${props => (props.$mode === 'dark' ? 1 : 0)};
   visibility: ${props => (props.$mode === 'dark' ? 'visible' : 'hidden')};
-  transition: ${props => props.theme.transition(['visibility', 'opacity'])};
+  transition: ${({ theme }) => theme.transition(['visibility', 'opacity'])};
 
   &::before,
   &::after {
