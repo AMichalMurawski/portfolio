@@ -1,15 +1,27 @@
 import React from 'react';
 import { ButtonCV } from '../../elements';
 import { groupProps } from '../../elements/types';
-import { BoxWrapper, CVWrapper, PictureWrapper } from './MyPicture.styled';
+import {
+  BackgroundImage,
+  BoxWrapper,
+  CVWrapper,
+  Picture,
+  PictureBackground,
+  PictureWrapper,
+} from './MyPicture.styled';
 
 export const MyPicture: React.FC<groupProps> = ({ wrapperStyles }) => {
   return (
     <BoxWrapper style={wrapperStyles}>
-      <PictureWrapper>My Pic</PictureWrapper>
-      <CVWrapper>
+      <PictureWrapper>
+        <Picture src={''} alt="My picture" />
+        <PictureBackground>
+          <BackgroundImage />
+        </PictureBackground>
+      </PictureWrapper>
+      {/* <CVWrapper>
         <ButtonCV linkTo="/curriculum-vitae" />
-      </CVWrapper>
+      </CVWrapper> */}
     </BoxWrapper>
   );
 };
