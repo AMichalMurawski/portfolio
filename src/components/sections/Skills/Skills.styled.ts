@@ -7,11 +7,9 @@ export const SkillsWrapper = styled(PageWrapper)``;
 export const ListWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 60px;
   justify-content: center;
   align-content: stretch;
 `;
 
-export const ListElement = styled(LiElement)`
-  flex-basis: calc((100% - 30px * 5) / 6);
-`;
+export const ListElement = styled(LiElement)``;
