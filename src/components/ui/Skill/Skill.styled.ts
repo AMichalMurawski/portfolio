@@ -24,35 +24,43 @@ const pennantMove = keyframes`
     rotate: 0;
   }
   5%, {
-    rotate: 16deg;
-  }
-  15% {
-    rotate: -14deg;
-  }
-  25%, {
-    rotate: 12deg;
-  }
-  35% {
-    rotate: -10deg;
-  }
-  45%, {
     rotate: 8deg;
   }
-  55% {
-    rotate: -6deg;
+  15% {
+    rotate: -7deg;
   }
-  65%, {
+  25%, {
+    rotate: 6deg;
+  }
+  35% {
+    rotate: -5deg;
+  }
+  45%, {
     rotate: 4deg;
   }
-  75% {
+  55% {
     rotate: -3deg;
   }
-  85% {
+  65%, {
     rotate: 2deg;
   }
-  95% {
-    rotate: -1deg;
+  75% {
+    rotate: -1.5deg;
   }
+  85% {
+    rotate: 1deg;
+  }
+  95% {
+    rotate: -0.5deg;
+  }
+`;
+
+export const PennantMove = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  animation: ${pennantMove} 3000ms ease-in-out;
 `;
 
 export const PennantWrapper = styled.div`
@@ -60,7 +68,6 @@ export const PennantWrapper = styled.div`
   width: 100%;
   height: 100%;
   transform-origin: top;
-  animation: ${pennantMove} 3000ms ease-in-out;
 `;
 
 export const Rope = styled.div`
