@@ -45,7 +45,7 @@ export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
     setIsMove(true);
     setTimeout(() => {
       setIsMove(false);
-    }, 3000);
+    }, 4000);
   };
 
   return (

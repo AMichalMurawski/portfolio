@@ -24,34 +24,34 @@ const pennantMove = keyframes`
     rotate: 0;
   }
   5%, {
-    rotate: 8deg;
+    rotate: 5.5deg;
   }
   15% {
-    rotate: -7deg;
+    rotate: -4.5deg;
   }
   25%, {
-    rotate: 6deg;
+    rotate: 3.6deg;
   }
   35% {
-    rotate: -5deg;
+    rotate: -2.8deg;
   }
   45%, {
-    rotate: 4deg;
+    rotate: 2.1deg;
   }
   55% {
-    rotate: -3deg;
-  }
-  65%, {
-    rotate: 2deg;
-  }
-  75% {
     rotate: -1.5deg;
   }
-  85% {
+  65%, {
     rotate: 1deg;
   }
+  75% {
+    rotate: -0.6deg;
+  }
+  85% {
+    rotate: 0.3deg;
+  }
   95% {
-    rotate: -0.5deg;
+    rotate: -0.1deg;
   }
 `;
 
@@ -60,7 +60,7 @@ export const PennantMove = styled.div`
   width: 100%;
   height: 100%;
   transform-origin: top;
-  animation: ${pennantMove} 3000ms ease-in-out;
+  animation: ${pennantMove} 4000ms ease-in-out;
 `;
 
 export const PennantWrapper = styled.div`
