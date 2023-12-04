@@ -39,17 +39,14 @@ const PennantComponent: React.FC<PennantProps> = ({
 };
 
 export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
-  const [isMove, setIsMove] = useState<Boolean>(false);
+  const [isMove, setIsMove] = useState<boolean>(false);
 
   const handleMouseMove = () => {
-    if (isMove) return;
     setIsMove(true);
     setTimeout(() => {
       setIsMove(false);
     }, 3000);
   };
-
-  console.log(isMove);
 
   return (
     <SkillWrapper>
@@ -60,7 +57,7 @@ export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
             key={caption}
             caption={caption}
             link={link}
-            handleMouseMove={handleMouseMove}
+            handleMouseMove={() => {}}
           />
         </PennantMove>
       ) : (
