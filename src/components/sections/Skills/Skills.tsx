@@ -10,9 +10,13 @@ export const Skills: React.FC = () => {
       <Subtitle>My skills</Subtitle>
       <ListWrapper>
         {skills.map(skill => {
-          console.log();
+          const translateX = Math.round(Math.random() * 20) - 10;
+          const translateY = Math.round(Math.random() * 20) - 10;
           return (
-            <ListElement key={skill.name}>
+            <ListElement
+              key={skill.name}
+              style={{ translate: `${translateX}px ${translateY}px` }}
+            >
               <Skill caption={skill.caption} link={skill.link} />
             </ListElement>
           );

@@ -5,6 +5,7 @@ import { LiElement } from '../../../utils/styles';
 export const SkillsWrapper = styled(PageWrapper)``;
 
 export const ListWrapper = styled.ul`
+  padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 60px;

@@ -1,21 +1,22 @@
 import React from 'react';
-import { SVG, USE } from './IconSvg.styled';
 import { icons } from '../../../images';
+import { SVG } from './IconSvg.styled';
 
 interface IconSvgProps {
-  iconName: string;
+  link: string;
+  dimension: string;
 }
 
-export const IconSvg: React.FC<IconSvgProps> = ({ iconName }) => {
+export const IconSvg: React.FC<IconSvgProps> = ({ link, dimension }) => {
   return (
-    <>
-      <SVG width={'16'} height={'16'} viewBox="0 0 16 16">
-        <USE
-          width={'16'}
-          height={'16'}
-          xlinkHref={icons + '#icon-' + iconName}
-        />
-      </SVG>
-    </>
+    <SVG
+      viewBox="0 0 30 30"
+      x="30"
+      y="30"
+      xmlns="http://www.w3.org/2000/svg"
+      $dimension={dimension}
+    >
+      <use href={icons + '#iconskill-' + link} />
+    </SVG>
   );
 };

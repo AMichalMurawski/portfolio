@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import {
-  Image2,
-  ImageContener2,
-  ImgName2,
   Nail,
   Pennant,
   PennantMove,
   PennantWrapper,
   Rope,
+  SVGContener,
+  SVGPosition,
+  SkillName,
   SkillWrapper,
 } from './Skill.styled';
+import { IconSvg } from '../../elements';
 
 interface SkillProps {
   caption: string;
@@ -29,27 +30,26 @@ const PennantComponent: React.FC<PennantProps> = ({
     <>
       <Rope />
       <Pennant onMouseMove={handleMouseMove}>
-        <ImageContener2>
-          <Image2 src={link} alt={caption} />{' '}
-        </ImageContener2>
-        <ImgName2>{caption}</ImgName2>
+        <SVGContener>
+          <SVGPosition>
+            <IconSvg link={link} dimension="100%" />
+          </SVGPosition>
+        </SVGContener>
+        <SkillName>{caption}</SkillName>
       </Pennant>
     </>
   );
 };
 
 export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
-  const [isMove, setIsMove] = useState<Boolean>(false);
+  const [isMove, setIsMove] = useState<boolean>(false);
 
   const handleMouseMove = () => {
-    if (isMove) return;
     setIsMove(true);
     setTimeout(() => {
       setIsMove(false);
-    }, 3000);
+    }, 4000);
   };
-
-  console.log(isMove);
 
   return (
     <SkillWrapper>
@@ -60,7 +60,7 @@ export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
             key={caption}
             caption={caption}
             link={link}
-            handleMouseMove={handleMouseMove}
+            handleMouseMove={() => {}}
           />
         </PennantMove>
       ) : (
