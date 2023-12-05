@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
-export const SVG = styled.svg`
-  width: 16px;
-  height: 16px;
-  fill: black;
-  background-color: red;
-`;
+interface SVGProps {
+  $dimension: string;
+}
 
-export const USE = styled.use`
-  fill: black;
+export const SVG = styled.svg<SVGProps>`
+  width: ${props => props.$dimension};
+  height: ${props => props.$dimension};
 `;

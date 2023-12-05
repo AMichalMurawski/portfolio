@@ -1,9 +1,12 @@
 import styled, { keyframes } from 'styled-components';
-import { ImgElement, PElement } from '../../../utils/styles';
+import { PElement } from '../../../utils/styles';
+
+const basicWidth = 100;
+const basicHeight = 250;
 
 export const SkillWrapper = styled.div`
-  width: 150px;
-  height: 300px;
+  width: ${basicWidth}px;
+  height: ${basicHeight}px;
   position: relative;
 `;
 
@@ -12,8 +15,8 @@ export const Nail = styled.div`
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
+  width: ${basicWidth / 5}px;
+  height: ${basicWidth / 5}px;
   border-radius: 50%;
   background-color: black;
   z-index: 1;
@@ -72,43 +75,47 @@ export const PennantWrapper = styled.div`
 
 export const Rope = styled.div`
   position: absolute;
-  top: 60px;
+  top: ${basicWidth / 2}px;
   left: 50%;
-  translate: -50% -40px;
-  width: 100px;
-  height: 100px;
+  translate: -50% -${basicWidth / 3}px;
+  width: ${(basicWidth / 3) * 2}px;
+  height: ${(basicWidth / 3) * 2}px;
   rotate: 45deg;
-  border-top-left-radius: 10px;
-  box-shadow: 0 0 0 3px red;
-  outline: dotted 3px orange;
+  border-top-left-radius: ${basicWidth / 15}px;
+  box-shadow: 0 0 0 ${basicWidth / 20}px red;
+  outline: dashed ${basicWidth / 20}px orange;
 `;
 
 export const Pennant = styled.div`
   position: absolute;
-  top: 73px;
+  top: ${basicWidth * 0.54}px;
   left: 50%;
-  width: 143px;
-  height: 200px;
+  width: ${basicWidth * 0.99}px;
+  height: ${(basicHeight * 2) / 3}px;
+  padding: ${basicWidth / 10}px;
   translate: -50% 0;
   background-color: orange;
-  box-shadow: 0 0 0 3px red;
-  outline: dotted 3px orange;
+  box-shadow: 0 0 0 ${basicWidth / 20}px red;
+  outline: dashed ${basicWidth / 20}px orange;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 `;
 
-export const ImageContener2 = styled.div`
-  width: 80%;
-  height: 80%;
+export const SVGContener = styled.div`
+  width: ${basicWidth * 0.8}px;
+  height: ${basicWidth * 0.8}px;
 `;
 
-export const Image2 = styled(ImgElement)`
-  object-fit: scale-down;
+export const SVGPosition = styled.div`
+  width: ${basicWidth}px;
+  height: ${basicWidth}px;
+  translate: -${basicWidth / 10}px -${basicWidth / 10}px;
 `;
 
-export const ImgName2 = styled(PElement)`
-  font-size: 24px;
+export const SkillName = styled(PElement)`
+  font-size: 18px;
   font-weight: 700;
   text-align: center;
 `;

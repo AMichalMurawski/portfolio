@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import {
-  Image2,
-  ImageContener2,
-  ImgName2,
   Nail,
   Pennant,
   PennantMove,
   PennantWrapper,
   Rope,
+  SVGContener,
+  SVGPosition,
+  SkillName,
   SkillWrapper,
 } from './Skill.styled';
+import { IconSvg } from '../../elements';
 
 interface SkillProps {
   caption: string;
@@ -29,10 +30,12 @@ const PennantComponent: React.FC<PennantProps> = ({
     <>
       <Rope />
       <Pennant onMouseMove={handleMouseMove}>
-        <ImageContener2>
-          <Image2 src={link} alt={caption} />{' '}
-        </ImageContener2>
-        <ImgName2>{caption}</ImgName2>
+        <SVGContener>
+          <SVGPosition>
+            <IconSvg link={link} dimension="100%" />
+          </SVGPosition>
+        </SVGContener>
+        <SkillName>{caption}</SkillName>
       </Pennant>
     </>
   );

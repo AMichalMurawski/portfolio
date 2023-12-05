@@ -55,6 +55,7 @@ export const PictureBackground = styled.div`
     5% 65%
   );
   box-shadow: inset 4px 4px 8px red;
+  overflow: hidden;
   z-index: -10;
 `;
 
@@ -68,9 +69,9 @@ export const Picture = styled.img`
 `;
 
 export const BackgroundImage = styled.div`
-  width: 120%;
-  height: 120%;
-  translate: -10%, -10%;
+  width: 140%;
+  height: 140%;
+  translate: -20%, -20%;
   background-image: url(${bricks});
   background-size: cover;
   background-repeat: repeat;

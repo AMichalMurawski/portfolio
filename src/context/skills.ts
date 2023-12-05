@@ -10,37 +10,37 @@ export const skills: Skills[] = [
   {
     name: 'React',
     caption: 'React',
-    link: reactLogo,
+    link: 'reactjs',
   },
   {
     name: 'React-Redux',
     caption: 'React Redux',
-    link: reactLogo,
+    link: 'redux',
+  },
+  {
+    name: 'TypeScript',
+    caption: 'TypeScript',
+    link: 'typescript',
   },
   {
     name: 'JavaScript',
     caption: 'JavaScript',
-    link: reactLogo,
+    link: 'javascript',
   },
   {
-    name: 'Jest',
-    caption: 'Jest',
-    link: reactLogo,
-  },
-  {
-    name: 'HTML',
-    caption: 'HTML',
-    link: reactLogo,
+    name: 'HTML5',
+    caption: 'HTML5',
+    link: 'html5',
   },
   {
     name: 'CSS',
     caption: 'CSS',
-    link: reactLogo,
+    link: 'css',
   },
   {
     name: 'Sass',
     caption: 'Sass',
-    link: reactLogo,
+    link: 'sass',
   },
   {
     name: 'BEM',
@@ -50,11 +50,36 @@ export const skills: Skills[] = [
   {
     name: 'Git',
     caption: 'Git',
-    link: reactLogo,
+    link: 'git',
   },
   {
     name: 'Figma',
     caption: 'Figma',
-    link: reactLogo,
+    link: 'figma',
+  },
+  {
+    name: 'npm',
+    caption: 'npm',
+    link: 'npm',
+  },
+  {
+    name: 'MongoDB',
+    caption: 'MongoDB',
+    link: 'mongodb',
+  },
+  {
+    name: 'Postman',
+    caption: 'Postman',
+    link: 'postman',
+  },
+  {
+    name: 'Prettier',
+    caption: 'Prettier',
+    link: 'prettier',
+  },
+  {
+    name: 'VSCode',
+    caption: 'VSCode',
+    link: 'vscode',
   },
 ];
