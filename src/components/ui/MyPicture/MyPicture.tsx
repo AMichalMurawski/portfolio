@@ -19,9 +19,9 @@ export const MyPicture: React.FC<groupProps> = ({ wrapperStyles }) => {
           <BackgroundImage />
         </PictureBackground>
       </PictureWrapper>
-      {/* <CVWrapper>
-        <ButtonCV linkTo="/curriculum-vitae" />
-      </CVWrapper> */}
+      <CVWrapper>
+        <ButtonCV linkTo="/" />
+      </CVWrapper>
     </BoxWrapper>
   );
 };
