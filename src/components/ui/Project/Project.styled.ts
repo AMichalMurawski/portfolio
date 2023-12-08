@@ -7,6 +7,7 @@ export const ProjectWrapper = styled.div`
   gap: 15px;
   width: 400px;
   padding: 15px;
+  z-index: -10;
 `;
 
 export const Image = styled(ImgElement)`
