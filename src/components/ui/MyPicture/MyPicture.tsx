@@ -9,6 +9,7 @@ import {
   PictureBackground,
   PictureWrapper,
 } from './MyPicture.styled';
+// import { myPicture } from '../../../images';
 
 export const MyPicture: React.FC<groupProps> = ({ wrapperStyles }) => {
   return (

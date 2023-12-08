@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { bricks } from '../../../images';
+import { bricks2 } from '../../../images';
 
 export const BoxWrapper = styled.div`
   position: relative;
@@ -72,7 +72,7 @@ export const BackgroundImage = styled.div`
   width: 140%;
   height: 140%;
   translate: -20%, -20%;
-  background-image: url(${bricks});
+  background-image: url(${bricks2});
   background-size: cover;
   background-repeat: repeat;
 `;
