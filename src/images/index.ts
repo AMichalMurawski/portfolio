@@ -4,5 +4,16 @@ import woodImage from './26e0eefba802ae87aa86e9718008c8d5.jpg';
 import icons from './icons.svg';
 import myPicture from './my-picture.png';
 import bricks from './pexels-photo-207142.jpeg';
+import bricks2 from './pexels-photo-207142-2.jpg';
+import bricks3 from './math-xMfp5hVmJVw-unsplash.jpg';
 
-export { reactLogo, bgImage, woodImage, icons, myPicture, bricks };
+export {
+  reactLogo,
+  bgImage,
+  woodImage,
+  icons,
+  myPicture,
+  bricks,
+  bricks2,
+  bricks3,
+};
