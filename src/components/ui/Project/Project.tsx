@@ -1,22 +1,56 @@
 import React from 'react';
-import { Description, Image, ProjectWrapper, Tool } from './Project.styled';
+import {
+  Description,
+  Image,
+  ImageSwiper,
+  ImageSlide,
+  Name,
+  ProjectWrapper,
+  Tool,
+} from './Project.styled';
+import { Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 interface ProjectProps {
   tools: string[];
-  image: string | string[];
+  images: string[];
   description: string;
+  name: string;
 }
 
 export const Project: React.FC<ProjectProps> = ({
   tools,
-  image,
+  images,
   description,
+  name,
 }) => {
   return (
     <ProjectWrapper>
-      {typeof image === 'string' ? <Image src={image} /> : null}
+      <ImageSwiper
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        slidesPerView={'auto'}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        scrollbar={{}}
+        modules={[Autoplay, Navigation]}
+      >
+        {images.length > 0 &&
+          images.map((image, i) => (
+            <ImageSlide key={i}>
+              <Image src={image} />
+            </ImageSlide>
+          ))}
+      </ImageSwiper>
       <Tool>{tools.map(tool => tool).join(', ')}</Tool>
       <Description>{description}</Description>
+      <Name>{name}</Name>
     </ProjectWrapper>
   );
 };

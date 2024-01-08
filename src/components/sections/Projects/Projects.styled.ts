@@ -6,14 +6,18 @@ export const ProjectWrapper = styled(PageWrapper)`
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-inline: 60px;
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding-inline: 60px;
+  }
 `;
 
-export const ProjectsContener = styled(Swiper)`
+export const ProjectsConteiner = styled(Swiper)`
   width: 100%;
   cursor: w-resize;
   background-color: white;
+  height: 100%;
   // border: 4px solid black;
   // border-radius: 20px;
   // box-shadow: inset 0 0 2px rgb(255, 255, 255), inset 0 0 4px rgb(220, 220, 220);
@@ -55,7 +59,7 @@ export const ProjectsContener = styled(Swiper)`
 `;
 
 export const ProjectItem = styled(SwiperSlide)`
-  width: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

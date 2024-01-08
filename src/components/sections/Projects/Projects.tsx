@@ -2,7 +2,7 @@ import React from 'react';
 import {
   ProjectItem,
   ProjectWrapper,
-  ProjectsContener,
+  ProjectsConteiner,
 } from './Projects.styled';
 import { Subtitle } from '../../elements';
 import { projects } from '../../../context';
@@ -17,7 +17,7 @@ export const Projects: React.FC = () => {
     <ProjectWrapper id="projects">
       <Subtitle>My Projects</Subtitle>
       <ScrollBoard>
-        <ProjectsContener
+        <ProjectsConteiner
           spaceBetween={30}
           pagination={{
             clickable: true,
@@ -25,7 +25,7 @@ export const Projects: React.FC = () => {
           slidesPerView={'auto'}
           centeredSlides={true}
           autoplay={{
-            delay: 5000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
           scrollbar={{}}
@@ -34,13 +34,14 @@ export const Projects: React.FC = () => {
           {projects.map((project, i) => (
             <ProjectItem key={i}>
               <Project
-                description={project.name}
+                description={project.description}
                 tools={project.tools}
-                image={project.images[0]}
+                images={project.images}
+                name={project.name}
               />
             </ProjectItem>
           ))}
-        </ProjectsContener>
+        </ProjectsConteiner>
       </ScrollBoard>
     </ProjectWrapper>
   );
