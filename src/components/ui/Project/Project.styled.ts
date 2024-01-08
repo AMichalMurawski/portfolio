@@ -4,16 +4,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const ProjectWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 10fr 10fr;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 240px 10fr;
   grid-gap: 20px;
   width: 100%;
-  height: 590px;
+  height: 610px;
   padding: 15px;
   z-index: -10;
 
-  @media screen and (min-width: 480px) {
-    grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 280px 1fr;
     grid-template-rows: 5fr 5fr 10fr;
   }
 
@@ -33,7 +33,7 @@ export const Name = styled.h3`
   text-align: center;
   grid-area: 1 / 1 / 2 / 2;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 600px) {
     grid-area: 1 / 2 / 2 / 3;
   }
 
@@ -47,7 +47,7 @@ export const Tool = styled(PElement)`
   height: 100%;
   grid-area: 2 / 1 / 3 / 2;
 
-  @media not screen and (min-width: 480px) {
+  @media not screen and (min-width: 600px) {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
@@ -55,7 +55,7 @@ export const Tool = styled(PElement)`
     overflow: hidden;
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 600px) {
     grid-area: 2 / 2 / 3 / 3;
   }
 
@@ -72,7 +72,7 @@ export const Description = styled(PElement)`
   white-space: pre-wrap;
   grid-area: 4 / 1 / 5 / 2;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 600px) {
     -webkit-line-clamp: 11;
     grid-area: 3 / 1 / 4 / 3;
   }
@@ -85,20 +85,24 @@ export const Description = styled(PElement)`
 
 export const Image = styled(ImgElement)`
   width: 100%;
+  height: 100%;
   object-fit: contain;
 `;
 
 export const ImageSwiper = styled(Swiper)`
-  width: 100%;
-  height: auto;
+  width: 230px;
+  height: 240px;
   grid-area: 3 / 1 / 4 / 2;
   filter: drop-shadow(15px 10px 6px gray);
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 600px) {
+    width: 100%;
+    height: 100%;
     grid-area: 1 / 1 / 3 / 2;
   }
 
   @media screen and (min-width: 900px) {
+    padding: 20px;
     grid-area: 1 / 1 / 4 / 2;
   }
 `;

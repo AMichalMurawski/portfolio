@@ -14,7 +14,7 @@ import {
 } from './ScrollBoard.styled';
 
 export const ScrollBoard: React.FC<PropsWithChildren> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   const handleOpen = () => {
     if (isOpen === true) setIsOpen(false);

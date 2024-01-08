@@ -19,6 +19,8 @@ export const Projects: React.FC = () => {
       <ScrollBoard>
         <ProjectsConteiner
           spaceBetween={30}
+          grabCursor={true}
+          loop={true}
           pagination={{
             clickable: true,
           }}

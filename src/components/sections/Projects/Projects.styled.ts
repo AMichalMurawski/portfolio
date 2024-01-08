@@ -15,7 +15,6 @@ export const ProjectWrapper = styled(PageWrapper)`
 
 export const ProjectsConteiner = styled(Swiper)`
   width: 100%;
-  cursor: w-resize;
   background-color: white;
   height: 100%;
   // border: 4px solid black;

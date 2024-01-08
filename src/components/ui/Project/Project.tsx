@@ -8,9 +8,9 @@ import {
   ProjectWrapper,
   Tool,
 } from './Project.styled';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, EffectCube } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/effect-cube';
 
 interface ProjectProps {
   tools: string[];
@@ -28,18 +28,19 @@ export const Project: React.FC<ProjectProps> = ({
   return (
     <ProjectWrapper>
       <ImageSwiper
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
+        effect={'cube'}
+        grabCursor={true}
+        cubeEffect={{
+          shadow: false,
+          slideShadows: false,
         }}
-        slidesPerView={'auto'}
-        centeredSlides={true}
+        loop={true}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
         scrollbar={{}}
-        modules={[Autoplay, Navigation]}
+        modules={[Autoplay, EffectCube]}
       >
         {images.length > 0 &&
           images.map((image, i) => (
