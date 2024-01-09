@@ -6,11 +6,10 @@ import {
 } from './Projects.styled';
 import { Subtitle } from '../../elements';
 import { projects } from '../../../context';
-import { Project } from '../../ui';
+import { Project, ScrollBoard } from '../../ui';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { ScrollBoard } from './ScrollBoard/ScrollBoard';
 
 export const Projects: React.FC = () => {
   return (

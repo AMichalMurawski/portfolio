@@ -8,7 +8,7 @@ export const ProjectWrapper = styled(PageWrapper)`
   gap: 30px;
   overflow: hidden;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     padding-inline: 60px;
   }
 `;
