@@ -1,4 +1,10 @@
-import reactLogo from '../images/reactLogo.png';
+import {
+  filmoteka0,
+  filmoteka1,
+  filmoteka2,
+  filmoteka3,
+  filmoteka4,
+} from '../images';
 
 interface ProjectList {
   name: string;
@@ -9,39 +15,44 @@ interface ProjectList {
 
 export const projects: ProjectList[] = [
   {
-    name: 'Wallet Application 1',
-    tools: ['React', 'HTML', 'CSS'],
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.`,
-    images: [reactLogo],
+    name: 'Filmoteka 1',
+    tools: ['JavaScript', 'HTML', 'CSS', 'firebase'],
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. ',
+    images: [filmoteka0, filmoteka1, filmoteka2, filmoteka3, filmoteka4],
   },
   {
-    name: 'Wallet Application 2',
-    tools: ['React', 'HTML', 'CSS'],
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.`,
-    images: [reactLogo],
+    name: 'Filmoteka 2',
+    tools: ['JavaScript', 'HTML', 'CSS', 'firebase'],
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.',
+    images: [filmoteka0, filmoteka1, filmoteka2, filmoteka3, filmoteka4],
   },
   {
-    name: 'Wallet Application 3',
-    tools: ['React', 'HTML', 'CSS'],
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.`,
-    images: [reactLogo],
+    name: 'Filmoteka 3',
+    tools: ['JavaScript', 'HTML', 'CSS', 'firebase'],
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.',
+    images: [filmoteka0, filmoteka1, filmoteka2, filmoteka3, filmoteka4],
   },
   {
-    name: 'Wallet Application 4',
-    tools: ['React', 'HTML', 'CSS'],
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.`,
-    images: [reactLogo],
+    name: 'Filmoteka 4',
+    tools: ['JavaScript', 'HTML', 'CSS', 'firebase'],
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.',
+    images: [filmoteka0, filmoteka1, filmoteka2, filmoteka3, filmoteka4],
   },
   {
-    name: 'Wallet Application 5',
-    tools: ['React', 'HTML', 'CSS'],
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.`,
-    images: [reactLogo],
+    name: 'Filmoteka 5',
+    tools: ['JavaScript', 'HTML', 'CSS', 'firebase'],
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.',
+    images: [filmoteka0, filmoteka1, filmoteka2, filmoteka3, filmoteka4],
   },
   {
-    name: 'Wallet Application 6',
-    tools: ['React', 'HTML', 'CSS'],
-    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.`,
-    images: [reactLogo],
+    name: 'Filmoteka 6',
+    tools: ['JavaScript', 'HTML', 'CSS', 'firebase'],
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa exercitationem, quasi tenetur sint mollitia cupiditate ut fugit nesciunt odit temporibus.',
+    images: [filmoteka0, filmoteka1, filmoteka2, filmoteka3, filmoteka4],
   },
 ];

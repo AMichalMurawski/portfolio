@@ -5,4 +5,5 @@ export * from './HeaderBackground/HeaderBackground';
 export * from './Introduction/Introduction';
 export * from './MyPicture/MyPicture';
 export * from './Project/Project';
+export * from './ScrollBoard';
 export * from './Skill/Skill';

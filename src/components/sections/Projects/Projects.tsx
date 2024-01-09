@@ -2,30 +2,31 @@ import React from 'react';
 import {
   ProjectItem,
   ProjectWrapper,
-  ProjectsContener,
+  ProjectsConteiner,
 } from './Projects.styled';
 import { Subtitle } from '../../elements';
 import { projects } from '../../../context';
-import { Project } from '../../ui';
+import { Project, ScrollBoard } from '../../ui';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { ScrollBoard } from './ScrollBoard/ScrollBoard';
 
 export const Projects: React.FC = () => {
   return (
     <ProjectWrapper id="projects">
       <Subtitle>My Projects</Subtitle>
       <ScrollBoard>
-        <ProjectsContener
+        <ProjectsConteiner
           spaceBetween={30}
+          grabCursor={true}
+          loop={true}
           pagination={{
             clickable: true,
           }}
           slidesPerView={'auto'}
           centeredSlides={true}
           autoplay={{
-            delay: 5000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
           scrollbar={{}}
@@ -34,13 +35,14 @@ export const Projects: React.FC = () => {
           {projects.map((project, i) => (
             <ProjectItem key={i}>
               <Project
-                description={project.name}
+                description={project.description}
                 tools={project.tools}
-                image={project.images[0]}
+                images={project.images}
+                name={project.name}
               />
             </ProjectItem>
           ))}
-        </ProjectsContener>
+        </ProjectsConteiner>
       </ScrollBoard>
     </ProjectWrapper>
   );
