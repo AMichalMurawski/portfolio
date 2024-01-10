@@ -1,0 +1,25 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="iconslides-enlarge" viewBox="0 0 32 32">
+<path d="M32 0h-13l5 5-6 6 3 3 6-6 5 5z"></path>
+<path d="M32 32v-13l-5 5-6-6-3 3 6 6-5 5z"></path>
+<path d="M0 32h13l-5-5 6-6-3-3-6 6-5-5z"></path>
+<path d="M0 0v13l5-5 6 6 3-3-6-6 5-5z"></path>
+</symbol>
+<symbol id="iconslides-play3" viewBox="0 0 32 32">
+<path d="M6 4l20 12-20 12z"></path>
+</symbol>
+<symbol id="iconslides-pause2" viewBox="0 0 32 32">
+<path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path>
+</symbol>
+<symbol id="iconslides-previous2" viewBox="0 0 32 32">
+<path d="M8 28v-24h4v11l10-10v22l-10-10v11z"></path>
+</symbol>
+<symbol id="iconslides-next2" viewBox="0 0 32 32">
+<path d="M24 4v24h-4v-11l-10 10v-22l10 10v-11z"></path>
+</symbol>
+<symbol id="iconslides-eject" viewBox="0 0 32 32">
+<path d="M0 24h32v4h-32zM16 4l16 16h-32z"></path>
+</symbol>
+</defs>
+</svg>

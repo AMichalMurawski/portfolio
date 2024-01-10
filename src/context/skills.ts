@@ -1,85 +1,85 @@
 import { reactLogo } from '../images';
 
 interface Skills {
-  name: string;
+  id: string;
   caption: string;
-  link: string;
+  name: string;
 }
 
 export const skills: Skills[] = [
   {
-    name: 'React',
+    id: 'React',
     caption: 'React',
-    link: 'reactjs',
+    name: 'reactjs',
   },
   {
-    name: 'React-Redux',
+    id: 'React-Redux',
     caption: 'React Redux',
-    link: 'redux',
+    name: 'redux',
   },
   {
-    name: 'TypeScript',
+    id: 'TypeScript',
     caption: 'TypeScript',
-    link: 'typescript',
+    name: 'typescript',
   },
   {
-    name: 'JavaScript',
+    id: 'JavaScript',
     caption: 'JavaScript',
-    link: 'javascript',
+    name: 'javascript',
   },
   {
-    name: 'HTML5',
+    id: 'HTML5',
     caption: 'HTML5',
-    link: 'html5',
+    name: 'html5',
   },
   {
-    name: 'CSS',
+    id: 'CSS',
     caption: 'CSS',
-    link: 'css',
+    name: 'css',
   },
   {
-    name: 'Sass',
+    id: 'Sass',
     caption: 'Sass',
-    link: 'sass',
+    name: 'sass',
   },
   {
-    name: 'BEM',
+    id: 'BEM',
     caption: 'BEM',
-    link: reactLogo,
+    name: reactLogo,
   },
   {
-    name: 'Git',
+    id: 'Git',
     caption: 'Git',
-    link: 'git',
+    name: 'git',
   },
   {
-    name: 'Figma',
+    id: 'Figma',
     caption: 'Figma',
-    link: 'figma',
+    name: 'figma',
   },
   {
-    name: 'npm',
+    id: 'npm',
     caption: 'npm',
-    link: 'npm',
+    name: 'npm',
   },
   {
-    name: 'MongoDB',
+    id: 'MongoDB',
     caption: 'MongoDB',
-    link: 'mongodb',
+    name: 'mongodb',
   },
   {
-    name: 'Postman',
+    id: 'Postman',
     caption: 'Postman',
-    link: 'postman',
+    name: 'postman',
   },
   {
-    name: 'Prettier',
+    id: 'Prettier',
     caption: 'Prettier',
-    link: 'prettier',
+    name: 'prettier',
   },
   {
-    name: 'VSCode',
+    id: 'VSCode',
     caption: 'VSCode',
-    link: 'vscode',
+    name: 'vscode',
   },
 ];

@@ -14,10 +14,10 @@ export const Skills: React.FC = () => {
           const translateY = Math.round(Math.random() * 20) - 10;
           return (
             <ListElement
-              key={skill.name}
+              key={skill.id}
               style={{ translate: `${translateX}px ${translateY}px` }}
             >
-              <Skill caption={skill.caption} link={skill.link} />
+              <Skill caption={skill.caption} name={skill.name} />
             </ListElement>
           );
         })}

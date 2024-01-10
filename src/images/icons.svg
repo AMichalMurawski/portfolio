@@ -132,5 +132,26 @@
 <path fill="#0877b9" style="fill: var(--color31, #0877b9)" d="M15.215 15.975l5.281-4.032-0.034-4.034c0 0-0.226-0.88-0.978-0.422l-7.027 6.396 2.759 2.093z"></path>
 <path fill="#3c99d4" style="fill: var(--color32, #3c99d4)" d="M19.639 24.567c0.307 0.314 0.678 0.211 0.678 0.211l4.115-2.028c0.527-0.359 0.453-0.805 0.453-0.805v-12.11c0-0.532-0.545-0.716-0.545-0.716l-3.567-1.719c-0.779-0.482-1.29 0.087-1.29 0.087s0.657-0.473 0.978 0.422v16.012c0 0.11-0.023 0.218-0.070 0.316-0.094 0.189-0.298 0.366-0.787 0.292l0.034 0.038z"></path>
 </symbol>
+<symbol id="iconslides-enlarge" viewBox="0 0 32 32">
+<path d="M32 0h-13l5 5-6 6 3 3 6-6 5 5z"></path>
+<path d="M32 32v-13l-5 5-6-6-3 3 6 6-5 5z"></path>
+<path d="M0 32h13l-5-5 6-6-3-3-6 6-5-5z"></path>
+<path d="M0 0v13l5-5 6 6 3-3-6-6 5-5z"></path>
+</symbol>
+<symbol id="iconslides-play" viewBox="0 0 32 32">
+<path d="M6 4l20 12-20 12z"></path>
+</symbol>
+<symbol id="iconslides-pause" viewBox="0 0 32 32">
+<path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path>
+</symbol>
+<symbol id="iconslides-previous" viewBox="0 0 32 32">
+<path d="M8 28v-24h4v11l10-10v22l-10-10v11z"></path>
+</symbol>
+<symbol id="iconslides-next" viewBox="0 0 32 32">
+<path d="M24 4v24h-4v-11l-10 10v-22l10 10v-11z"></path>
+</symbol>
+<symbol id="iconslides-eject" viewBox="0 0 32 32">
+<path d="M0 24h32v4h-32zM16 4l16 16h-32z"></path>
+</symbol>
 </defs>
 </svg>

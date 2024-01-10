@@ -84,6 +84,7 @@ export const Image = styled(ImgElement)`
 `;
 
 export const ImageSwiper = styled(Swiper)`
+  position: relative;
   width: 180px;
   height: 190px;
   grid-area: 3 / 1 / 4 / 2;
@@ -99,6 +100,16 @@ export const ImageSwiper = styled(Swiper)`
     height: 100%;
     padding: 20px;
     grid-area: 1 / 1 / 4 / 2;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
   }
 `;
 

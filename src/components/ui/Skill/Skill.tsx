@@ -14,7 +14,7 @@ import { IconSvg } from '../../elements';
 
 interface SkillProps {
   caption: string;
-  link: string;
+  name: string;
 }
 
 interface PennantProps extends SkillProps {
@@ -23,7 +23,7 @@ interface PennantProps extends SkillProps {
 
 const PennantComponent: React.FC<PennantProps> = ({
   caption,
-  link,
+  name,
   handleMouseMove,
 }) => {
   return (
@@ -32,7 +32,7 @@ const PennantComponent: React.FC<PennantProps> = ({
       <Pennant onMouseMove={handleMouseMove}>
         <SVGContener>
           <SVGPosition>
-            <IconSvg link={link} dimension="100%" />
+            <IconSvg type="iconskill" name={name} dimension="100%" />
           </SVGPosition>
         </SVGContener>
         <SkillName>{caption}</SkillName>
@@ -41,7 +41,7 @@ const PennantComponent: React.FC<PennantProps> = ({
   );
 };
 
-export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
+export const Skill: React.FC<SkillProps> = ({ caption, name }) => {
   const [isMove, setIsMove] = useState<boolean>(false);
 
   const handleMouseMove = () => {
@@ -59,7 +59,7 @@ export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
           <PennantComponent
             key={caption}
             caption={caption}
-            link={link}
+            name={name}
             handleMouseMove={() => {}}
           />
         </PennantMove>
@@ -68,7 +68,7 @@ export const Skill: React.FC<SkillProps> = ({ caption, link }) => {
           <PennantComponent
             key={caption}
             caption={caption}
-            link={link}
+            name={name}
             handleMouseMove={handleMouseMove}
           />
         </PennantWrapper>
