@@ -6,7 +6,16 @@ export const basicStyle = {
     sentence: '24px',
   },
   fontFamily: {
-    main: 'Roboto',
+    main: `font-family: 'Dancing Script', cursive;
+            font-weight: 400;`,
+    title1: `font-family: 'Dancing Script', cursive;
+                        font-weight: 400;`,
+    title2: `font-family: 'Edu TAS Beginner', cursive;
+                        font-weight: 700;`,
+    sectionTitle: `font-family: 'Rubik Wet Paint', sans-serif;
+                  font-weight: 400;`,
+    paragraph: `font-family: 'Roboto', sans-serif;
+                  font-weight: 400;`,
     DancingScript400: `font-family: 'Dancing Script', cursive;
                         font-weight: 400;`,
     DancingScript700: `font-family: 'Dancing Script', cursive;

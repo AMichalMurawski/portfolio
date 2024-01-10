@@ -1,17 +1,5 @@
 import styled from 'styled-components';
-import { PageWrapper } from '../../../App.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-export const ProjectWrapper = styled(PageWrapper)`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  overflow: hidden;
-
-  @media screen and (min-width: 600px) {
-    padding-inline: 60px;
-  }
-`;
 
 export const ProjectsConteiner = styled(Swiper)`
   width: 100%;

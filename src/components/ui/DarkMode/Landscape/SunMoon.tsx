@@ -25,7 +25,7 @@ export const SunMoon: React.FC = () => {
     <>
       <SunMoonRotate $rotate={rotate}>
         {[...Array(3)].map((e, i) => (
-          <>
+          <div key={i}>
             <SunMoonBox $rotate={i * 120 + 0}>
               <Sun />
             </SunMoonBox>
@@ -36,7 +36,7 @@ export const SunMoon: React.FC = () => {
                 ))}
               </Moon>
             </SunMoonBox>
-          </>
+          </div>
         ))}
       </SunMoonRotate>
     </>
