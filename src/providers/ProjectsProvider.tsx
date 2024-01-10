@@ -6,15 +6,23 @@ import React, {
 } from 'react';
 
 interface ProjectsState {
-  autoplay: boolean;
-  toggleAutoplay: () => void;
+  controlledSwiper: any;
+  setControlledSwiper: any;
+  autoplayOn: () => void;
+  autoplayOff: () => void;
+  nextSlide: () => void;
+  prevSlide: () => void;
   boardOpen: boolean;
   toggleBoardOpen: () => void;
 }
 
 const defaultProjects: ProjectsState = {
-  autoplay: true,
-  toggleAutoplay: () => {},
+  controlledSwiper: null,
+  setControlledSwiper: () => {},
+  autoplayOn: () => {},
+  autoplayOff: () => {},
+  nextSlide: () => {},
+  prevSlide: () => {},
   boardOpen: false,
   toggleBoardOpen: () => {},
 };
@@ -26,9 +34,21 @@ export const useProjects = () => useContext(ProjectsContext);
 export const ProjectsProvider: React.FC<PropsWithChildren<unknown>> = ({
   children,
 }) => {
-  const [autoplay, setAutoplay] = useState<boolean>(true);
-  const toggleAutoplay = (): void => {
-    setAutoplay(!autoplay);
+  const [controlledSwiper, setControlledSwiper] = useState<any>(null);
+
+  const autoplayOn = () => {
+    controlledSwiper.slideNext();
+    controlledSwiper.autoplay.start();
+  };
+  const autoplayOff = () => {
+    controlledSwiper.autoplay.stop();
+  };
+
+  const nextSlide = () => {
+    controlledSwiper.slideNext();
+  };
+  const prevSlide = () => {
+    controlledSwiper.slidePrev();
   };
 
   const [boardOpen, setBoardOpen] = useState<boolean>(false);
@@ -38,7 +58,16 @@ export const ProjectsProvider: React.FC<PropsWithChildren<unknown>> = ({
 
   return (
     <ProjectsContext.Provider
-      value={{ autoplay, toggleAutoplay, boardOpen, toggleBoardOpen }}
+      value={{
+        controlledSwiper,
+        setControlledSwiper,
+        autoplayOn,
+        autoplayOff,
+        nextSlide,
+        prevSlide,
+        boardOpen,
+        toggleBoardOpen,
+      }}
     >
       {children}
     </ProjectsContext.Provider>

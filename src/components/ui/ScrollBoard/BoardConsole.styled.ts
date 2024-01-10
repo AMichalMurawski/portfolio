@@ -11,15 +11,17 @@ export const Console = styled.div`
   width: 100%;
   height: 30px;
   background-color: darkgray;
+  z-index: 10;
 `;
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.button.attrs({ type: 'button' })`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25px;
   height: 25px;
   background-color: gray;
+
   border-radius: 4px;
   scale: 1;
 

@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Cover, Front, Glass, Side } from './BoardCover.styled';
 import { Frame } from './BoardFrame.styled';
+import { useProjects } from '../../../providers';
 
 export const BoardCover: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
-
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
-  };
+  const { boardOpen } = useProjects();
 
   return (
-    <Cover onClick={handleOpen} $isOpen={isOpen}>
+    <Cover $isOpen={boardOpen}>
       <Front>
         <Glass />
         <Frame $adjacent="vertical" $side="left" />
