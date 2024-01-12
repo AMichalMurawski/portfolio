@@ -8,8 +8,8 @@ export const Button = styled(HashLinkElement)`
   border-radius: 10px;
   background-color: ${({ theme }) => theme.btnLink.bg};
   box-shadow: ${({ theme }) => theme.btnLink.boxShadow};
-  cursor: pointer;
   color: ${({ theme }) => theme.btnLink.txt};
+  cursor: pointer;
 
   &:hover {
     box-shadow: ${({ theme }) =>

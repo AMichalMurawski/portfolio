@@ -5,7 +5,7 @@ import {
   HeaderConst,
   HeaderWrapper,
 } from './Header.styled';
-import { ButtonHash } from '../../elements';
+import { ButtonHash, ButtonHashLamp } from '../../elements';
 import { links } from '../../../context';
 import { HeaderBackground } from '../../ui';
 
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
           </div>
           <ButtonsList>
             {links.map(link => (
-              <ButtonHash
+              <ButtonHashLamp
                 key={link.path}
                 caption={link.name}
                 linkTo={link.path}

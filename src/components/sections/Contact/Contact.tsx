@@ -16,7 +16,7 @@ const local = 'localisation: ';
 
 export const Contact: React.FC = () => {
   return (
-    <ContactWrapper>
+    <ContactWrapper id="contact">
       <ContactInformationContainer>
         <Subtitle>Contact Me</Subtitle>
         <AddressContainer>
