@@ -32,5 +32,6 @@ export const Bulb = styled(Link)`
   filter: blur(0.5px);
   text-decoration: none;
   text-shadow: 0 0 2px white;
-  ${({ theme }) => theme.fontFamily.navbar}
+  ${({ theme }) => theme.fontFamily.paragraph}
+  font-weight:900;
 `;

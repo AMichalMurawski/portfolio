@@ -16,8 +16,8 @@ export const basicStyle = {
                   font-weight: 400;`,
     paragraph: `font-family: 'Roboto', sans-serif;
                   font-weight: 400;`,
-    navbar: `font-family: 'Roboto', sans-serif;
-                  font-weight: 900;`,
+    navbar: `font-family: 'Basicdots', sans-serif;
+                  font-weight: 400;`,
     DancingScript400: `font-family: 'Dancing Script', cursive;
                         font-weight: 400;`,
     DancingScript700: `font-family: 'Dancing Script', cursive;

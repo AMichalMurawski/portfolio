@@ -7,7 +7,7 @@ import {
 } from './Header.styled';
 import { ButtonHash, ButtonHashLamp } from '../../elements';
 import { links } from '../../../context';
-import { HeaderBackground } from '../../ui';
+import { HeaderBackground, LedBoard } from '../../ui';
 
 export const Header: React.FC = () => {
   return (
@@ -34,7 +34,8 @@ export const Header: React.FC = () => {
           >
             Logo
           </div>
-          <ButtonsList>
+          <LedBoard linkList={links} />
+          {/* <ButtonsList>
             {links.map(link => (
               <ButtonHashLamp
                 key={link.path}
@@ -42,7 +43,7 @@ export const Header: React.FC = () => {
                 linkTo={link.path}
               />
             ))}
-          </ButtonsList>
+          </ButtonsList> */}
         </HeaderWrapper>
       </HeaderBox>
     </>
