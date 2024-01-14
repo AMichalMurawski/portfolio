@@ -1,28 +1,35 @@
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
+const dimension = 2.5;
+
 export const LedBoardFrame = styled.div`
-  padding: 6px;
+  padding: ${2 * dimension}px;
   background-color: black;
-  max-width: 50vw;
+  max-width: 50%;
   z-index: 1;
-  width: 50%;
+  min-width: min-content;
 `;
 
-export const LedConteiner = styled.div`
+export const LedConteiner = styled.nav`
+  max-width: fit-content;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 8px;
-  column-gap: 4px;
+  row-gap: ${2 * dimension}px;
+  column-gap: ${5 * dimension}px;
   background-color: gray;
   background-image: radial-gradient(
-    circle at 2px 2px,
-    lightgray 1.5px,
+    circle at ${dimension / 2}px ${dimension / 2}px,
+    lightgray ${(0.75 * dimension) / 2}px,
     transparent 0
   );
-  background-size: 4px 4px;
-  width: 100%;
-  height: 100%;
+  background-size: ${dimension}px ${dimension}px;
+`;
+
+export const Phrase = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: ${dimension}px;
 `;
 
 export const HashLink = styled(Link)`
@@ -31,7 +38,7 @@ export const HashLink = styled(Link)`
   padding: 0;
   margin: 0;
   cursor: pointer;
-  gap: 4px;
+  gap: ${dimension}px;
 `;
 
 export const Letter = styled.div`
@@ -44,17 +51,19 @@ export const Row = styled.div`
   flex-direction: row;
 `;
 
-export const FlashPoint = styled.div`
-  width: 4px;
-  height: 4px;
-  background-image: radial-gradient(
-    circle at 2px 2px,
-    blue 1.5px,
-    transparent 0
-  );
+export const Point = styled.div`
+  position: relative;
+  width: ${dimension}px;
+  height: ${dimension}px;
 `;
 
-export const EmptyPoint = styled.div`
-  width: 4px;
-  height: 4px;
+export const LightPoint = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
+  background-color: blue;
+  border-radius: 50%;
 `;
