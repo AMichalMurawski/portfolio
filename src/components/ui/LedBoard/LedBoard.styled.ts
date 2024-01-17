@@ -1,13 +1,14 @@
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
-export const dimension = 2.5;
+export const dimension = 3;
 
 export const LedBoardFrame = styled.div`
+  position: relative;
   padding: ${dimension}px;
   border: ${2 * dimension}px solid black;
-  max-width: 50%;
   z-index: 1;
+  width: min-content;
   min-width: min-content;
   background-color: rgb(0, 0, 0);
   background-image: radial-gradient(
@@ -16,13 +17,15 @@ export const LedBoardFrame = styled.div`
     transparent 0
   );
   background-size: ${dimension}px ${dimension}px;
+  transform: perspective(800px);
+  box-shadow: 0 0 4px #b2ffff, 0 0 16px #b2ffff;
 `;
 
 export const LedConteiner = styled.nav`
   max-width: fit-content;
   display: flex;
   flex-wrap: wrap;
-  row-gap: ${2 * dimension}px;
+  row-gap: ${4 * dimension}px;
   column-gap: ${5 * dimension}px;
   // justify-content: center;
 `;

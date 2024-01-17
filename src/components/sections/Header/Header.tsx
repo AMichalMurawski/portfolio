@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
           >
             Logo
           </div>
-          <LedBoard linkList={links} />
+          {/* <LedBoard linkList={links} /> */}
           {/* <ButtonsList>
             {links.map(link => (
               <ButtonHashLamp

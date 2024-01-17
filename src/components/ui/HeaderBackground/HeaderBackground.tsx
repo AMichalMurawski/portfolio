@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { BgWrapper, Board, BoardsBox } from './HeaderBackground.styled';
+import {
+  BgWrapper,
+  Board,
+  BoardsBox,
+  DarkModeWrapper,
+  LedBoardWrapper,
+} from './HeaderBackground.styled';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import { useStyle } from '../../../providers';
-import { DarkMode } from '../DarkMode/DarkMode';
+import { DarkMode, LedBoard } from '../../ui';
+import { links } from '../../../context';
 
 type BoardsCount = number[];
 
@@ -50,7 +57,12 @@ export const HeaderBackground: React.FC = () => {
   return (
     <BgWrapper $width={widthBox}>
       <BoardsBox $width={widthBox}>
-        <DarkMode />
+        <DarkModeWrapper>
+          <DarkMode />
+        </DarkModeWrapper>
+        <LedBoardWrapper>
+          <LedBoard linkList={links} />
+        </LedBoardWrapper>
         {/* <WindowDarkMode /> */}
         {boardsCount.map((pos, i) => {
           return <Board key={i} $position={pos} />;
