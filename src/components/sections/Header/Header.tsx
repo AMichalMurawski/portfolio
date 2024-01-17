@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  ButtonsList,
-  HeaderBox,
-  HeaderConst,
-  HeaderWrapper,
-} from './Header.styled';
-import { ButtonHash, ButtonHashLamp } from '../../elements';
-import { links } from '../../../context';
-import { HeaderBackground, LedBoard } from '../../ui';
+import { HeaderBox, HeaderConst, HeaderWrapper } from './Header.styled';
+import { HeaderBackground } from '../../ui';
 
 export const Header: React.FC = () => {
   return (
@@ -34,16 +27,6 @@ export const Header: React.FC = () => {
           >
             Logo
           </div>
-          {/* <LedBoard linkList={links} /> */}
-          {/* <ButtonsList>
-            {links.map(link => (
-              <ButtonHashLamp
-                key={link.path}
-                caption={link.name}
-                linkTo={link.path}
-              />
-            ))}
-          </ButtonsList> */}
         </HeaderWrapper>
       </HeaderBox>
     </>
