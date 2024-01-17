@@ -1,14 +1,21 @@
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
-const dimension = 2.5;
+export const dimension = 2.5;
 
 export const LedBoardFrame = styled.div`
-  padding: ${2 * dimension}px;
-  background-color: black;
+  padding: ${dimension}px;
+  border: ${2 * dimension}px solid black;
   max-width: 50%;
   z-index: 1;
   min-width: min-content;
+  background-color: gray;
+  background-image: radial-gradient(
+    circle at ${dimension / 2}px ${dimension / 2}px,
+    lightgray ${(0.55 * dimension) / 2}px,
+    transparent 0
+  );
+  background-size: ${dimension}px ${dimension}px;
 `;
 
 export const LedConteiner = styled.nav`
@@ -17,13 +24,7 @@ export const LedConteiner = styled.nav`
   flex-wrap: wrap;
   row-gap: ${2 * dimension}px;
   column-gap: ${5 * dimension}px;
-  background-color: gray;
-  background-image: radial-gradient(
-    circle at ${dimension / 2}px ${dimension / 2}px,
-    lightgray ${(0.75 * dimension) / 2}px,
-    transparent 0
-  );
-  background-size: ${dimension}px ${dimension}px;
+  // justify-content: center;
 `;
 
 export const Phrase = styled.div`
@@ -62,8 +63,10 @@ export const LightPoint = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
-  height: 75%;
-  background-color: blue;
+  width: 85%;
+  height: 85%;
+  background-color: rgb(225, 255, 200);
+  box-shadow: 0 0 16px 1px rgba(160, 255, 255, 0.6),
+    0 0 32px 1px rgba(144, 255, 255, 0.6);
   border-radius: 50%;
 `;
