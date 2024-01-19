@@ -8,7 +8,7 @@ interface ButtonProps {
 
 export const ButtonHash: React.FC<ButtonProps> = ({ caption, linkTo }) => {
   return (
-    <Button spy={true} offset={-200} hashSpy={true} to={linkTo}>
+    <Button spy={true} offset={-120} hashSpy={true} to={linkTo}>
       {caption}
     </Button>
   );

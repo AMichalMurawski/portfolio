@@ -11,9 +11,4 @@ export const DarkModeWindowBorders = styled.div`
   border-top-right-radius: ${darkModeElement.border}px;
 `;
 
-export const DarkModeWrapper = styled.div`
-  position: absolute;
-  top: 25%;
-  left: calc(50% - 157px);
-  transform: translate(-50%, -50%);
-`;
+export const DarkModeConteiner = styled.div``;

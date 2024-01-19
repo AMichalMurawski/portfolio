@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Basicdots';
+  src: url('./fonts/Basicdots/Basicdots.TTF') format('truetype');
+}
+
 body {
   position: relative;
   margin: 0;
