@@ -37,8 +37,9 @@ export const ProjectsProvider: React.FC<PropsWithChildren<unknown>> = ({
   const [controlledSwiper, setControlledSwiper] = useState<any>(null);
 
   const autoplayOn = () => {
-    controlledSwiper.slideNext();
     controlledSwiper.autoplay.start();
+    controlledSwiper.slideNext();
+    console.log(controlledSwiper);
   };
   const autoplayOff = () => {
     controlledSwiper.autoplay.stop();

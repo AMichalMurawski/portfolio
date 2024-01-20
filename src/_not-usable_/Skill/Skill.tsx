@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  ImageFrame,
   Nail,
   Pennant,
   PennantMove,
@@ -11,8 +10,7 @@ import {
   SkillName,
   SkillWrapper,
 } from './Skill.styled';
-import { IconSvg } from '../../elements';
-import { imageFrame } from '../../../images';
+import { IconSvg } from '../../components/elements';
 
 interface SkillProps {
   caption: string;
@@ -32,7 +30,6 @@ const PennantComponent: React.FC<PennantProps> = ({
     <>
       <Rope />
       <Pennant onMouseMove={handleMouseMove}>
-        <ImageFrame src={imageFrame} />
         <SVGContener>
           <SVGPosition>
             <IconSvg type="iconskill" name={name} dimension="100%" />

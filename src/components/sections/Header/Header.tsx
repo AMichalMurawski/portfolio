@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
     const width =
       boardsCount.length * styles.width.board + (boardsCount.length - 1) * 2;
     setWidthBox(width);
-  }, [boardsCount, styles.width.board]);
+  }, [windowSize, boardsCount, styles.width.board]);
 
   return (
     <>

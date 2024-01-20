@@ -1,12 +1,12 @@
 import styled, { keyframes } from 'styled-components';
-import { PElement } from '../../../utils/styles';
+import { PElement } from '../../utils/styles';
 
-const basicWidth = 150;
-const basicHeight = 200;
+const basicWidth = 100;
+const basicHeight = 250;
 
 export const SkillWrapper = styled.div`
   width: ${basicWidth}px;
-  height: ${basicHeight * 1.22}px;
+  height: ${basicHeight}px;
   position: relative;
 `;
 
@@ -15,8 +15,8 @@ export const Nail = styled.div`
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: ${basicWidth / 10}px;
-  height: ${basicWidth / 10}px;
+  width: ${basicWidth / 5}px;
+  height: ${basicWidth / 5}px;
   border-radius: 50%;
   background-color: black;
   z-index: 1;
@@ -78,38 +78,29 @@ export const Rope = styled.div`
   top: ${basicWidth / 2}px;
   left: 50%;
   translate: -50% -${basicWidth / 3}px;
-  width: ${basicWidth * 0.6}px;
-  height: ${basicWidth * 0.6}px;
+  width: ${(basicWidth / 3) * 2}px;
+  height: ${(basicWidth / 3) * 2}px;
   rotate: 45deg;
   border-top-left-radius: ${basicWidth / 15}px;
-  box-shadow: 0 0 0 ${basicWidth / 40}px black;
-  outline: dashed ${basicWidth / 40}px rgb(90, 90, 90);
+  box-shadow: 0 0 0 ${basicWidth / 20}px red;
+  outline: dashed ${basicWidth / 20}px orange;
 `;
 
 export const Pennant = styled.div`
   position: absolute;
-  top: ${basicWidth * 0.3}px;
+  top: ${basicWidth * 0.54}px;
   left: 50%;
-  width: ${basicWidth}px;
-  height: ${basicHeight}px;
+  width: ${basicWidth * 0.99}px;
+  height: ${(basicHeight * 2) / 3}px;
   padding: ${basicWidth / 10}px;
   translate: -50% 0;
-  background-color: rgb(235, 235, 235);
+  background-color: orange;
+  box-shadow: 0 0 0 ${basicWidth / 20}px red;
+  outline: dashed ${basicWidth / 20}px orange;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  overflow: hidden;
-`;
-
-export const ImageFrame = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 50.5%;
-  transform: translate(-50%, -50%);
-  width: 106%;
-  height: 104%;
-  background-size: cover;
 `;
 
 export const SVGContener = styled.div`

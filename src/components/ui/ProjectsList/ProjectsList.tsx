@@ -9,31 +9,27 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export const ProjectsList: React.FC = () => {
-  const { controlledSwiper, setControlledSwiper } = useProjects();
+  const { setControlledSwiper } = useProjects();
 
   return (
     <ScrollBoard>
       <ProjectsConteiner
-        controller={{ control: controlledSwiper }}
         onSwiper={setControlledSwiper}
         spaceBetween={30}
         grabCursor={true}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        slidesPerView={'auto'}
+        slidesPerView={1}
         centeredSlides={true}
+        speed={1000}
         autoplay={{
-          delay: 1000,
+          delay: 5000,
           disableOnInteraction: false,
           waitForTransition: true,
         }}
-        scrollbar={{}}
         modules={[Autoplay, Controller, Navigation]}
       >
         {projects.map((project, i) => (
-          <ProjectItem key={i}>
+          <ProjectItem key={project.name}>
             <Project
               description={project.description}
               tools={project.tools}
