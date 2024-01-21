@@ -1,42 +1,28 @@
 import styled, { keyframes } from 'styled-components';
-import { PElement } from '../../../utils/styles';
+import { PElement } from '../../utils/styles';
 
-const basicWidth = 150;
-const basicHeight = 200;
+const basicWidth = 100;
+const basicHeight = 250;
 
 export const SkillWrapper = styled.div`
   width: ${basicWidth}px;
-  height: ${basicHeight * 1.22}px;
+  height: ${basicHeight}px;
   position: relative;
 `;
-
-const nailGradient = `transparent 0%,
-      transparent 20%,
-      lightgray 20%,
-      black 23%,
-      black 27%,
-      lightgray 30%,
-      transparent 30%`;
 
 export const Nail = styled.div`
   position: absolute;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: ${basicWidth / 10}px;
-  height: ${basicWidth / 10}px;
+  width: ${basicWidth / 5}px;
+  height: ${basicWidth / 5}px;
   border-radius: 50%;
-  background-color: gray;
-  background-image: linear-gradient(64deg, ${nailGradient}),
-    linear-gradient(-64deg, ${nailGradient}),
-    linear-gradient(244deg, ${nailGradient}),
-    linear-gradient(-244deg, ${nailGradient});
-  background-size: ${basicWidth / 40}px ${basicWidth / 20}px;
-  background-repeat: repeat-x space;
+  background-color: black;
   z-index: 1;
 `;
 
-const paintingMove = keyframes`
+const pennantMove = keyframes`
   0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
     rotate: 0;
   }
@@ -72,15 +58,15 @@ const paintingMove = keyframes`
   }
 `;
 
-export const PaintingMove = styled.div`
+export const PennantMove = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   transform-origin: top;
-  animation: ${paintingMove} 4000ms ease-in-out;
+  animation: ${pennantMove} 4000ms ease-in-out;
 `;
 
-export const PaintingWrapper = styled.div`
+export const PennantWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -92,40 +78,29 @@ export const Rope = styled.div`
   top: ${basicWidth / 2}px;
   left: 50%;
   translate: -50% -${basicWidth / 3}px;
-  width: ${basicWidth * 0.6}px;
-  height: ${basicWidth * 0.6}px;
+  width: ${(basicWidth / 3) * 2}px;
+  height: ${(basicWidth / 3) * 2}px;
   rotate: 45deg;
   border-top-left-radius: ${basicWidth / 15}px;
-  box-shadow: 0 0 0 ${basicWidth / 40}px black;
-  outline: dashed ${basicWidth / 40}px rgb(90, 90, 90);
-  filter: drop-shadow(8px 3px 3px gray);
+  box-shadow: 0 0 0 ${basicWidth / 20}px red;
+  outline: dashed ${basicWidth / 20}px orange;
 `;
 
-export const Painting = styled.div`
+export const Pennant = styled.div`
   position: absolute;
-  top: ${basicWidth * 0.3}px;
+  top: ${basicWidth * 0.54}px;
   left: 50%;
-  width: ${basicWidth}px;
-  height: ${basicHeight}px;
+  width: ${basicWidth * 0.99}px;
+  height: ${(basicHeight * 2) / 3}px;
   padding: ${basicWidth / 10}px;
   translate: -50% 0;
-  background-color: rgb(235, 235, 235);
+  background-color: orange;
+  box-shadow: 0 0 0 ${basicWidth / 20}px red;
+  outline: dashed ${basicWidth / 20}px orange;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  overflow: hidden;
-  filter: drop-shadow(10px 10px 6px gray);
-`;
-
-export const ImageFrame = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 50.5%;
-  transform: translate(-50%, -50%);
-  width: 106%;
-  height: 104%;
-  background-size: cover;
 `;
 
 export const SVGContener = styled.div`

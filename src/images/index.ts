@@ -13,6 +13,7 @@ import filmoteka1 from './filmoteka-1.png';
 import filmoteka2 from './filmoteka-2.png';
 import filmoteka3 from './filmoteka-3.png';
 import filmoteka4 from './filmoteka-4.png';
+import imageFrame from './frame-1427279.png';
 
 export {
   reactLogo,
@@ -30,4 +31,5 @@ export {
   filmoteka2,
   filmoteka3,
   filmoteka4,
+  imageFrame,
 };

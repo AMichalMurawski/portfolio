@@ -39,12 +39,11 @@ export const Project: React.FC<ProjectProps> = ({
           delay: 2000,
           disableOnInteraction: false,
         }}
-        scrollbar={{}}
         modules={[Autoplay, EffectCube]}
       >
         {images.length > 0 &&
           images.map((image, i) => (
-            <ImageSlide key={i}>
+            <ImageSlide key={image}>
               <Image src={image} />
             </ImageSlide>
           ))}

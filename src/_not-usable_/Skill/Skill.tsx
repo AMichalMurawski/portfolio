@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
 import {
-  ImageFrame,
   Nail,
-  Painting,
-  PaintingMove,
-  PaintingWrapper,
+  Pennant,
+  PennantMove,
+  PennantWrapper,
   Rope,
   SVGContener,
   SVGPosition,
   SkillName,
   SkillWrapper,
 } from './Skill.styled';
-import { IconSvg } from '../../elements';
-import { imageFrame } from '../../../images';
+import { IconSvg } from '../../components/elements';
 
 interface SkillProps {
   caption: string;
   name: string;
 }
 
-interface PaintingProps extends SkillProps {
+interface PennantProps extends SkillProps {
   handleMouseMove: () => void;
 }
 
-const PaintingComponent: React.FC<PaintingProps> = ({
+const PennantComponent: React.FC<PennantProps> = ({
   caption,
   name,
   handleMouseMove,
@@ -31,15 +29,14 @@ const PaintingComponent: React.FC<PaintingProps> = ({
   return (
     <>
       <Rope />
-      <Painting onMouseMove={handleMouseMove}>
-        <ImageFrame src={imageFrame} />
+      <Pennant onMouseMove={handleMouseMove}>
         <SVGContener>
           <SVGPosition>
             <IconSvg type="iconskill" name={name} dimension="100%" />
           </SVGPosition>
         </SVGContener>
         <SkillName>{caption}</SkillName>
-      </Painting>
+      </Pennant>
     </>
   );
 };
@@ -58,23 +55,23 @@ export const Skill: React.FC<SkillProps> = ({ caption, name }) => {
     <SkillWrapper>
       <Nail />
       {isMove ? (
-        <PaintingMove>
-          <PaintingComponent
+        <PennantMove>
+          <PennantComponent
             key={caption}
             caption={caption}
             name={name}
             handleMouseMove={() => {}}
           />
-        </PaintingMove>
+        </PennantMove>
       ) : (
-        <PaintingWrapper>
-          <PaintingComponent
+        <PennantWrapper>
+          <PennantComponent
             key={caption}
             caption={caption}
             name={name}
             handleMouseMove={handleMouseMove}
           />
-        </PaintingWrapper>
+        </PennantWrapper>
       )}
     </SkillWrapper>
   );

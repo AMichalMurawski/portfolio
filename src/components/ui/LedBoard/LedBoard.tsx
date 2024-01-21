@@ -27,20 +27,21 @@ export const LedBoard: React.FC<LedBoardProps> = ({ linkList }) => {
     <LedBoardFrame>
       <LedConteiner>
         {linkList.map((led, i) => (
-          <Phrase>
-            <LedLetter key={'firststar' + i} letter={'star'} />
+          <Phrase key={'phrase' + i}>
+            <LedLetter letter={'star'} />
             <HashLink
               key={led.name}
               spy={true}
               offset={-120}
               hashSpy={true}
               to={led.path}
+              smooth={true}
             >
               {ledText(led.name).map((letter: string, i: number) => (
                 <LedLetter key={'ledletter' + i} letter={letter} />
               ))}
             </HashLink>
-            <LedLetter key={'laststar' + i} letter={'star'} />
+            <LedLetter letter={'star'} />
           </Phrase>
         ))}
       </LedConteiner>
@@ -65,7 +66,7 @@ const LedRow: React.FC<{ row: number[] }> = ({ row }) => {
     <Row>
       {row.map((point, i) => {
         const isLight = point === 1 ? true : false;
-        return <LedPoint isLight={isLight} />;
+        return <LedPoint key={'ledpoint' + i} isLight={isLight} />;
       })}
     </Row>
   );
