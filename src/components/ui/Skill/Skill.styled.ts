@@ -10,6 +10,14 @@ export const SkillWrapper = styled.div`
   position: relative;
 `;
 
+const nailGradient = `transparent 0%,
+      transparent 20%,
+      lightgray 20%,
+      black 23%,
+      black 27%,
+      lightgray 30%,
+      transparent 30%`;
+
 export const Nail = styled.div`
   position: absolute;
   left: 50%;
@@ -18,11 +26,17 @@ export const Nail = styled.div`
   width: ${basicWidth / 10}px;
   height: ${basicWidth / 10}px;
   border-radius: 50%;
-  background-color: black;
+  background-color: gray;
+  background-image: linear-gradient(64deg, ${nailGradient}),
+    linear-gradient(-64deg, ${nailGradient}),
+    linear-gradient(244deg, ${nailGradient}),
+    linear-gradient(-244deg, ${nailGradient});
+  background-size: ${basicWidth / 40}px ${basicWidth / 20}px;
+  background-repeat: repeat-x space;
   z-index: 1;
 `;
 
-const pennantMove = keyframes`
+const paintingMove = keyframes`
   0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
     rotate: 0;
   }
@@ -58,15 +72,15 @@ const pennantMove = keyframes`
   }
 `;
 
-export const PennantMove = styled.div`
+export const PaintingMove = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   transform-origin: top;
-  animation: ${pennantMove} 4000ms ease-in-out;
+  animation: ${paintingMove} 4000ms ease-in-out;
 `;
 
-export const PennantWrapper = styled.div`
+export const PaintingWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -84,9 +98,10 @@ export const Rope = styled.div`
   border-top-left-radius: ${basicWidth / 15}px;
   box-shadow: 0 0 0 ${basicWidth / 40}px black;
   outline: dashed ${basicWidth / 40}px rgb(90, 90, 90);
+  filter: drop-shadow(8px 3px 3px gray);
 `;
 
-export const Pennant = styled.div`
+export const Painting = styled.div`
   position: absolute;
   top: ${basicWidth * 0.3}px;
   left: 50%;
@@ -100,6 +115,7 @@ export const Pennant = styled.div`
   align-items: center;
   gap: 15px;
   overflow: hidden;
+  filter: drop-shadow(10px 10px 6px gray);
 `;
 
 export const ImageFrame = styled.img`

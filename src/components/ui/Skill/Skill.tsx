@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import {
   ImageFrame,
   Nail,
-  Pennant,
-  PennantMove,
-  PennantWrapper,
+  Painting,
+  PaintingMove,
+  PaintingWrapper,
   Rope,
   SVGContener,
   SVGPosition,
@@ -19,11 +19,11 @@ interface SkillProps {
   name: string;
 }
 
-interface PennantProps extends SkillProps {
+interface PaintingProps extends SkillProps {
   handleMouseMove: () => void;
 }
 
-const PennantComponent: React.FC<PennantProps> = ({
+const PaintingComponent: React.FC<PaintingProps> = ({
   caption,
   name,
   handleMouseMove,
@@ -31,7 +31,7 @@ const PennantComponent: React.FC<PennantProps> = ({
   return (
     <>
       <Rope />
-      <Pennant onMouseMove={handleMouseMove}>
+      <Painting onMouseMove={handleMouseMove}>
         <ImageFrame src={imageFrame} />
         <SVGContener>
           <SVGPosition>
@@ -39,7 +39,7 @@ const PennantComponent: React.FC<PennantProps> = ({
           </SVGPosition>
         </SVGContener>
         <SkillName>{caption}</SkillName>
-      </Pennant>
+      </Painting>
     </>
   );
 };
@@ -58,23 +58,23 @@ export const Skill: React.FC<SkillProps> = ({ caption, name }) => {
     <SkillWrapper>
       <Nail />
       {isMove ? (
-        <PennantMove>
-          <PennantComponent
+        <PaintingMove>
+          <PaintingComponent
             key={caption}
             caption={caption}
             name={name}
             handleMouseMove={() => {}}
           />
-        </PennantMove>
+        </PaintingMove>
       ) : (
-        <PennantWrapper>
-          <PennantComponent
+        <PaintingWrapper>
+          <PaintingComponent
             key={caption}
             caption={caption}
             name={name}
             handleMouseMove={handleMouseMove}
           />
-        </PennantWrapper>
+        </PaintingWrapper>
       )}
     </SkillWrapper>
   );
