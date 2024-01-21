@@ -3,6 +3,7 @@ import { bricks2 } from '../../../images';
 
 export const BoxWrapper = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 const clipFloor = [
@@ -21,8 +22,8 @@ const clipFloor = [
 
 export const PictureWrapper = styled.div`
   position: relative;
-  width: 480px;
-  height: 480px;
+  width: min(480px, 90vw);
+  height: min(480px, 90vw);
   clip-path: polygon(${clipFloor.join(', ')}, 100% 57%, 100% 0%, 0% 0%, 0% 65%);
 `;
 

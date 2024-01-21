@@ -37,17 +37,15 @@ const flickering = keyframes`
     text-shadow: 0 0 #00f7ff;
     box-shadow: 0 0 #00f7ff;
   }
-
-  
 `;
 
 export const IntroductionWrapper = styled.div`
   padding: 30px;
   color: ${({ theme }) => theme.color.introduction};
-  // background-color: ${({ theme }) => theme.bg.introduction};
   border: 0 solid #a0ffff;
   border-radius: 30px;
   height: min-content;
+  width: auto;
   color: #a0ffff;
   font-weight: 400;
   letter-spacing: 0.4em;
@@ -63,6 +61,7 @@ export const IntroductionWrapper = styled.div`
 
 export const Proffesion = styled(H2Element)`
   color: inherit;
+  width: max-content;
   ${({ theme }) => theme.fontFamily.EduTASBeginner700}
   margin-bottom: 15px;
 `;

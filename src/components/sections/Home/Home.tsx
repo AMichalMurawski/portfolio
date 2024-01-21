@@ -1,16 +1,16 @@
 import React from 'react';
-import { HomeWrapper } from './Home.styled';
+import { HomeWrapper, IntroduceWrapper, MyPictureWrapper } from './Home.styled';
 import { Introduction, MyPicture } from '../../ui';
 
 export const Home: React.FC = () => {
   return (
     <HomeWrapper id="home">
-      <Introduction
-        wrapperStyles={{
-          margin: '15% 0 0',
-        }}
-      />
-      <MyPicture />
+      <MyPictureWrapper>
+        <MyPicture />
+      </MyPictureWrapper>
+      <IntroduceWrapper>
+        <Introduction />
+      </IntroduceWrapper>
     </HomeWrapper>
   );
 };
