@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   About,
   Background,
@@ -9,38 +9,37 @@ import {
   Skills,
 } from './components/sections';
 import { PageWindow } from './App.styled';
-import { relative } from 'path';
 
 const App: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  // const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
-  const pageLoad = e => {
-    setIsLoaded(true);
-  };
+  // const pageLoad = e => {
+  //   setIsLoaded(true);
+  // };
 
-  useEffect(() => {
-    window.addEventListener('load', pageLoad);
-    return () => {
-      window.removeEventListener('load', pageLoad);
-    };
-  });
+  // useEffect(() => {
+  //   window.addEventListener('load', pageLoad);
+  //   return () => {
+  //     window.removeEventListener('load', pageLoad);
+  //   };
+  // });
 
   return (
     <>
-      {isLoaded ? (
-        <>
-          <Header />
-          <div style={{ position: 'relative' }}>
-            <PageWindow>
-              <Home />
-              <About />
-              <Skills />
-              <Projects />
-              <Contact />
-            </PageWindow>
-            <Background />
-          </div>
-        </>
+      {/* {isLoaded ? (
+        <> */}
+      <Header />
+      <div style={{ position: 'relative' }}>
+        <PageWindow>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </PageWindow>
+        <Background />
+      </div>
+      {/* </>
       ) : (
         <div
           style={{
@@ -60,7 +59,7 @@ const App: React.FC = () => {
             <p>Page loading</p>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };
