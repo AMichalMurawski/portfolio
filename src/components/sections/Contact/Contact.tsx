@@ -3,9 +3,10 @@ import {
   Address,
   AddressContainer,
   AddressLink,
+  ContactConteiner,
   ContactFormContainer,
-  ContactInformationContainer,
   ContactWrapper,
+  SubtitleWrapper,
 } from './Contact.styled';
 import { Subtitle } from '../../elements';
 import { ContactForm } from '../../ui';
@@ -17,8 +18,10 @@ const local = 'localisation: ';
 export const Contact: React.FC = () => {
   return (
     <ContactWrapper id="contact">
-      <ContactInformationContainer>
-        <Subtitle>Contact Me</Subtitle>
+      <ContactConteiner>
+        <SubtitleWrapper>
+          <Subtitle>Contact Me</Subtitle>
+        </SubtitleWrapper>
         <AddressContainer>
           <Address>
             {email}
@@ -35,10 +38,10 @@ export const Contact: React.FC = () => {
             <AddressLink>Marki (near Warsaw)</AddressLink>
           </Address>
         </AddressContainer>
-      </ContactInformationContainer>
-      <ContactFormContainer>
-        <ContactForm />
-      </ContactFormContainer>
+        <ContactFormContainer>
+          <ContactForm />
+        </ContactFormContainer>
+      </ContactConteiner>
     </ContactWrapper>
   );
 };

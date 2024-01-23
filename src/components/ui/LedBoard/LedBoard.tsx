@@ -19,7 +19,6 @@ interface LedBoardProps {
 export const LedBoard: React.FC<LedBoardProps> = ({ linkList }) => {
   const ledText = (text: string) => {
     const textArray = text.split('');
-    console.log(textArray);
     return textArray;
   };
 

@@ -5,7 +5,7 @@ import {
   useMediaQuery,
   useMode,
   useStyle,
-} from '../providers/ThemeProvider/useContext';
+} from '../providers/useContext';
 
 export const FooTheme: React.FC = () => {
   const { mobile, tablet, desktop } = useMedia();
