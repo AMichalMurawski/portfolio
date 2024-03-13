@@ -34,7 +34,7 @@ export const TVContainer = styled.div`
     theme.transition(['background-color', 'border'])};
 `;
 
-export const Screen = styled(Swiper)`
+export const Screen = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
@@ -54,23 +54,15 @@ export const Shine = styled.div`
   width: 50px;
   height: 200%;
   transform: translateY(-50%) rotate(30deg);
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.2) 20%,
-    rgba(255, 255, 255, 0.5) 45%,
-    rgba(255, 255, 255, 0.5) 55%,
-    rgba(255, 255, 255, 0.2) 80%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: ${({ theme }) => theme.bg.shine};
   animation: ${shine} 8s infinite linear;
-  z-index: 1;
+  z-index: 10;
 `;
 
 export const Controls = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  padding-top: 10px;
 `;
 
 export const Button = styled.button`
