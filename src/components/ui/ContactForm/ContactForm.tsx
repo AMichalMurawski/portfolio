@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Email,
   Form,
+  GroupFrom,
   Label,
   Message,
   Name,
@@ -12,14 +13,14 @@ import {
 export const ContactForm: React.FC = () => {
   return (
     <Form>
-      <Label>
-        Name:
+      <GroupFrom>
+        <Label>Name:</Label>
         <Name name="name" placeholder="Name" />
-      </Label>
-      <Label>
-        Email:
+      </GroupFrom>
+      <GroupFrom>
+        <Label>Email:</Label>
         <Email name="email" placeholder="E-mail" />
-      </Label>
+      </GroupFrom>
       <Label>
         Message:
         <Message name="message" placeholder="Message" />
