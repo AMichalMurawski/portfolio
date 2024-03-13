@@ -1,7 +1,7 @@
 import React from 'react';
 import { Console, IconWrapper } from './BoardConsole.styled';
-import { IconSvg } from '../../elements';
-import { useProjects } from '../../../providers';
+import { IconSvg } from '../../components/elements';
+import { useProjects } from '../../providers';
 
 const consoleIcons = ['eject', 'previous', 'play', 'pause', 'next', 'enlarge'];
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ScrollBoard } from '../ScrollBoard';
 import { ProjectItem, ProjectsConteiner } from './ProjectsList.styled';
 import { Project } from '../Project/Project';
 import { projects } from '../../../context';
@@ -7,12 +6,13 @@ import { useProjects } from '../../../providers';
 import { Autoplay, Controller, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Television } from '../Television/Television';
 
 export const ProjectsList: React.FC = () => {
   const { setControlledSwiper } = useProjects();
 
   return (
-    <ScrollBoard>
+    <Television>
       <ProjectsConteiner
         onSwiper={setControlledSwiper}
         spaceBetween={30}
@@ -39,6 +39,6 @@ export const ProjectsList: React.FC = () => {
           </ProjectItem>
         ))}
       </ProjectsConteiner>
-    </ScrollBoard>
+    </Television>
   );
 };

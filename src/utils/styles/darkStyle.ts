@@ -15,6 +15,8 @@ export const darkStyle = {
       'linear-gradient(180deg, rgb(182, 189, 194) 5%, rgb(154, 180, 193) 100%)',
     cloud2: 'rgb(182, 189, 194)',
     sky: 'darkblue',
+    screen: 'rgba(255, 255, 255, 0.1)',
+    tv: '#000',
   },
   txtShadow: {
     subtitle: '0 0 2px #a0ffff, 0 0 4px #90ffff',

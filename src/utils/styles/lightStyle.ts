@@ -14,6 +14,8 @@ export const lightStyle = {
       'linear-gradient(180deg, rgba(242, 249, 254, 0.8) 5%, rgba(214, 240, 253, 0.8) 100%)',
     cloud2: 'rgba(242, 249, 254, 0.8)',
     sky: 'lightblue',
+    screen: 'rgba(255, 255, 255, 0.9)',
+    tv: '#222',
   },
   txtShadow: {
     subtitle: '',

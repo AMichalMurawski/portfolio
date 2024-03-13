@@ -26,6 +26,7 @@ export const ProjectWrapper = styled.div`
 
 export const Name = styled.h3`
   ${props => props.theme.fontFamily.title1}
+  color: ${({ theme }) => theme.color.main};
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -33,6 +34,7 @@ export const Name = styled.h3`
   font-size: 36px;
   text-align: center;
   grid-area: 1 / 1 / 2 / 2;
+  transition: ${({ theme }) => theme.transition('color')};
 
   @media screen and (min-width: 900px) {
     grid-area: 1 / 2 / 2 / 3;

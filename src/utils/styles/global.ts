@@ -5,6 +5,7 @@ export const headingStyles = (props: any) => `
     color: ${props.theme.color.main};
     max-width: max-content;
     width: 100%;
+    transition: ${({ theme }) => theme.transition('color')};
 `;
 
 export const H1Element = styled.h1`
@@ -22,6 +23,7 @@ export const PElement = styled.p`
     font-size: ${theme.fontSize.main};
     color: ${theme.color.main};
   `}
+  transition: ${({ theme }) => theme.transition('color')}
 `;
 
 export const AElement = styled.a`

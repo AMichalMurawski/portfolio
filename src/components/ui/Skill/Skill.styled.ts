@@ -140,6 +140,7 @@ export const SVGPosition = styled.div`
 `;
 
 export const SkillName = styled(PElement)`
+  color: black;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
