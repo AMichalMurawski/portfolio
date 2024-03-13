@@ -1,11 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import {
-  TVContainer,
-  Screen,
-  Controls,
-  Button,
-  Shine,
-} from './Television.styled';
+import { TVContainer, Screen, Shine, Console } from './Television.styled';
+import { TvConsole } from './Console';
 
 // Komponent Television
 export const Television: React.FC<PropsWithChildren> = ({ children }) => {
@@ -15,11 +10,9 @@ export const Television: React.FC<PropsWithChildren> = ({ children }) => {
         <Shine />
         {children}
       </Screen>
-      <Controls>
-        <Button>Power</Button>
-        <Button>Volume</Button>
-        <Button>Channel</Button>
-      </Controls>
+      <Console>
+        <TvConsole />
+      </Console>
     </TVContainer>
   );
 };

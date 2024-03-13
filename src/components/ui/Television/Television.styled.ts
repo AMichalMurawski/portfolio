@@ -59,22 +59,8 @@ export const Shine = styled.div`
   z-index: 10;
 `;
 
-export const Controls = styled.div`
+export const Console = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 10px;
-`;
-
-export const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #555;
-  }
 `;
