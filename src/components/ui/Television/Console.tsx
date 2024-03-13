@@ -1,13 +1,12 @@
 import React from 'react';
-import { Console, IconWrapper } from './BoardConsole.styled';
+import { Console, IconWrapper } from './Console.styled';
 import { IconSvg } from '../../elements';
 import { useProjects } from '../../../providers';
 
-const consoleIcons = ['eject', 'previous', 'play', 'pause', 'next', 'enlarge'];
+const consoleIcons = ['previous', 'play', 'pause', 'next', 'enlarge'];
 
-export const BoardConsole: React.FC = () => {
-  const { autoplayOn, autoplayOff, prevSlide, nextSlide, toggleBoardOpen } =
-    useProjects();
+export const TvConsole: React.FC = () => {
+  const { autoplayOn, autoplayOff, prevSlide, nextSlide } = useProjects();
 
   const handleClick = e => {
     switch (e.currentTarget.id) {
@@ -22,9 +21,6 @@ export const BoardConsole: React.FC = () => {
         break;
       case 'next':
         nextSlide();
-        break;
-      case 'eject':
-        toggleBoardOpen();
         break;
       default:
         break;

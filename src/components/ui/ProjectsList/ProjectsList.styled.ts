@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const ProjectsConteiner = styled(Swiper)`
   width: 100%;
-  background-color: white;
   height: 100%;
   // border: 4px solid black;
   // border-radius: 20px;
